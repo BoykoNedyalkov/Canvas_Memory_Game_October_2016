@@ -1,5 +1,4 @@
 let cardValues = [];
-
 let cardSize = 100;
 let nakov = document.getElementById('nakov');
 let rakia = document.getElementById('rakia');
@@ -12,18 +11,16 @@ let televizor = document.getElementById('televizor');
 let kazakov = document.getElementById('kazakov');
 let kostadinov = document.getElementById('kostadinov');
 
- let imgArr =['nakov', 'rakia', 'royal', 'salata', 'softUni', 'softUni1', 'softUni2', 'televizor', 'kazakov', 'kostadinov',
-     'nakov', 'rakia', 'royal', 'salata', 'softUni', 'softUni1', 'softUni2', 'televizor', 'kazakov', 'kostadinov']
-
-
-
 function cls() {
     ctx.clearRect(0, 0, 800, 600);
 }
 canvas.addEventListener("click", onCanvasClick, false);
 
 function onCanvasClick(e) {
-    alert(getCursorPosition(e));
+    let row = Math.ceil((getCursorPosition(e)[1]-20)/cardSize-1);
+    let col = Math.ceil((getCursorPosition(e)[0]-20)/cardSize-1);
+    alert(row+ "," +col);
+    return[row,col];
 }
 
 function getCursorPosition(e) {
@@ -84,21 +81,31 @@ for (var f = 1; f <= 20; f++) {
     cardValues.push(variable);
 
 }
+
 function drawCards(){
+
+    let arr = [];
     for (let i = 0; i <5 ; i++) {
         for (let j = 0; j <4 ; j++) {
+            arr[i[j]] = {
+                img:nakov,
+                value:1,
+                isFlipped:false
+            };
+            console.log('tuk sym');
             let s = 0;
             let startPointX = 20+i*cardSize;
             let startPointY = 20+j*cardSize;
             ctx.beginPath();
-            ctx.moveTo(startPointX,startPointY)
-            ctx.lineTo(startPointX+cardSize,startPointY)
+            ctx.moveTo(startPointX,startPointY);
+            ctx.lineTo(startPointX+cardSize,startPointY);
             ctx.lineTo(startPointX+cardSize,startPointY + cardSize);
             ctx.lineTo(startPointX,startPointY + cardSize);
             ctx.lineTo(startPointX,startPointY);
             ctx.stroke();
 
+            ctx.drawImage(arr[i[j]].img, startPointX, startPointY);
         }
-
     }
 }
+drawCards();
