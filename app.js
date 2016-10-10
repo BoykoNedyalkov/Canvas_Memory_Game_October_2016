@@ -1,7 +1,7 @@
 
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
-let cardSize = 100;
+let cardSize = 90;
 let nakov = document.getElementById('nakov');
 let simeon = document.getElementById('simeon');
 let rakia = document.getElementById('rakia');
@@ -81,41 +81,47 @@ function grid() {
     ctx.restore();
 }
 function drawCards(){
-
+    let iterator = 0;
     let arr = [];
     for (let i = 0; i <5 ; i++) {
+        arr[i] = [];
         for (let j = 0; j <4 ; j++) {
+
+            let firstX= 20+i*cardSize;
+             let firstY= 20+j*cardSize;
             let random = Math.floor((Math.random() * imgArr.length-1) + 1);
             let img = imgArr[random];
             console.log(img);
             imgArr.splice(imgArr.indexOf(img),1);
-            arr[i[j]] = {
-                img:nakov,
-                value:1,
-                isFlipped:false
+            arr[i][j] = {
+                    img:img,
+                    id: iterator,
+                    isFlipped:false,
+                    startPointX : firstX,
+                    startPointY : firstY,
+                    endPointX : firstX +90,
+                    endPointY: firstY+90
             };
-            console.log('tuk sym');
+            
+            
             let s = 0;
-            let startPointX = 20+i*cardSize;
-            let startPointY = 20+j*cardSize;
             ctx.beginPath();
-            ctx.moveTo(startPointX,startPointY);
-            switch (img){
-                case 'nakov':ctx.drawImage(nakov,startPointX,startPointY); break;
-                case 'rakia':ctx.drawImage(rakia,startPointX,startPointY); break;
-                case 'royal':ctx.drawImage(royal,startPointX,startPointY); break;
-                case 'salata':ctx.drawImage(salata,startPointX,startPointY); break;
-                case 'simeon':ctx.drawImage(simeon,startPointX,startPointY); break;
-                case 'softUni':ctx.drawImage(softUni,startPointX,startPointY); break;
-                case 'softUni1':ctx.drawImage(softUni1,startPointX,startPointY); break;
-                case 'softUni2':ctx.drawImage(softUni2,startPointX,startPointY); break;
-                case 'televizor':ctx.drawImage(televizor,startPointX,startPointY); break;
-                case 'kazakov':ctx.drawImage(kazakov,startPointX,startPointY); break;
-                case 'kostadinov':ctx.drawImage(kostadinov,startPointX,startPointY); break;
+            switch (arr[i][j].img){
+                case 'nakov':ctx.drawImage(nakov,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'rakia':ctx.drawImage(rakia,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'royal':ctx.drawImage(royal,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'salata':ctx.drawImage(salata,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'simeon':ctx.drawImage(simeon,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'softUni':ctx.drawImage(softUni,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'softUni1':ctx.drawImage(softUni1,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'softUni2':ctx.drawImage(softUni2,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'televizor':ctx.drawImage(televizor,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'kazakov':ctx.drawImage(kazakov,arr[i][j].startPointX,arr[i][j].startPointY); break;
+                case 'kostadinov':ctx.drawImage(kostadinov,arr[i][j].startPointX,arr[i][j].startPointY); break;
                 default:break;
             }
-            ctx.drawImage(arr[i[j]].img, startPointX, startPointY);
         }
     }
+    console.log(arr);
 }
 drawCards();
