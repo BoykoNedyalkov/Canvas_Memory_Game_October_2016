@@ -53,7 +53,39 @@ function res() {
     ctx.lineWidth = 1;
     ctx.lineCap = 'butt';
 }
+function loadingBar() {
+        let ctx = document.getElementById("canvas").getContext("2d");
+        let al = 0; //amount loaded
+        let start = 4.72; //start point of the circle - perfect north
+        let cw = ctx.canvas.width;
+        let ch = ctx.canvas.height;
+        let diff; //difference of the percentage
+        function progressSim() {
+            diff = ((al / 100) * Math.PI *2*10).toFixed(2);//process loading
+            ctx.clearRect(0,0,cw,ch); // clears canvas trough animation
+            ctx.lineWidth = 10;
+            ctx.fillStyle = '#09F';
+            ctx.strokeStyle = '#09F';
+            ctx.textAlign = 'center';
+            ctx.fillText(al + '%', cw / 2, ch / 2, cw);//Text position and visualization(text,x pos,y pos,max width)
+            ctx.beginPath();
+            ctx.arc(cw / 2,ch / 2,30,start,diff /10 + start, false); //position and parameters of the circle
+            ctx.stroke();
+            if(al >= 100){
+                clearTimeout(sim);//stop animation
+            }
+            al++;
+        }
+        let sim = setInterval(progressSim, 50);
+    }
+    function displayScoreAndTime() {
+        let ctx = document.getElementById("canvas").getContext("2d");
+        ctx.moveTo()
 
+    }
+    function reset() {
+        
+    }
 function grid() {
     ctx.save();
 
