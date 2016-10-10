@@ -1,6 +1,5 @@
 let cardValues = [];
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
+
 let cardSize = 100;
 let nakov = document.getElementById('nakov');
 let rakia = document.getElementById('rakia');
@@ -12,6 +11,11 @@ let softUni2 = document.getElementById('softUni2');
 let televizor = document.getElementById('televizor');
 let kazakov = document.getElementById('kazakov');
 let kostadinov = document.getElementById('kostadinov');
+
+ let imgArr =['nakov', 'rakia', 'royal', 'salata', 'softUni', 'softUni1', 'softUni2', 'televizor', 'kazakov', 'kostadinov',
+     'nakov', 'rakia', 'royal', 'salata', 'softUni', 'softUni1', 'softUni2', 'televizor', 'kazakov', 'kostadinov']
+
+
 
 function cls() {
     ctx.clearRect(0, 0, 800, 600);
@@ -93,10 +97,6 @@ function drawCards(){
             ctx.lineTo(startPointX,startPointY + cardSize);
             ctx.lineTo(startPointX,startPointY);
             ctx.stroke();
-            `<div class="flip3d">
-                  <div class="back">Box-2 back</div>
-                <div class="front">${context.drawImage(images.s, startPointX, startPointY, 100, 100)}</div>
-                </div>`
 
         }
 
