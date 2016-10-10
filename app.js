@@ -1,3 +1,4 @@
+
 let canvas = document.getElementById("canvas");
 let ctx = canvas.getContext("2d");
 let cardSize = 100;
@@ -21,7 +22,10 @@ function cls() {
 canvas.addEventListener("click", onCanvasClick, false);
 
 function onCanvasClick(e) {
-    alert(getCursorPosition(e));
+    let row = Math.ceil((getCursorPosition(e)[1]-20)/cardSize-1);
+    let col = Math.ceil((getCursorPosition(e)[0]-20)/cardSize-1);
+    alert(row+ "," +col);
+    return[row,col];
 }
 
 function getCursorPosition(e) {
@@ -77,12 +81,21 @@ function grid() {
     ctx.restore();
 }
 function drawCards(){
+
+    let arr = [];
     for (let i = 0; i <5 ; i++) {
         for (let j = 0; j <4 ; j++) {
             let random = Math.floor((Math.random() * imgArr.length-1) + 1);
             let img = imgArr[random];
             console.log(img);
             imgArr.splice(imgArr.indexOf(img),1);
+            arr[i[j]] = {
+                img:nakov,
+                value:1,
+                isFlipped:false
+            };
+            console.log('tuk sym');
+            let s = 0;
             let startPointX = 20+i*cardSize;
             let startPointY = 20+j*cardSize;
             ctx.beginPath();
@@ -101,9 +114,8 @@ function drawCards(){
                 case 'kostadinov':ctx.drawImage(kostadinov,startPointX,startPointY); break;
                 default:break;
             }
-
+            ctx.drawImage(arr[i[j]].img, startPointX, startPointY);
         }
-
     }
 }
 drawCards();
