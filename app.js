@@ -13,10 +13,12 @@
     function onCanvasClick(e) {
         let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
         let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
-        alert(row + "," + col);
+        if(row >= 0 && row < 4 && col >= 0 && col < 5){
+            alert(row + "," + col);
+        }
+
         return [row, col];
     }
-
     function getCursorPosition(e) {
         let x;
         let y;
@@ -73,52 +75,59 @@
 
      function timeLine() {//In progress
 
-         let ctx = document.getElementById("canvas").getContext("2d");
+         //let ctx = document.getElementById("canvas").getContext("2d");
          ctx.beginPath();
-         ctx.strokeStyle = 'yellow';
+         ctx.strokeStyle = 'skyblue';
          ctx.lineCap="round";
          ctx.moveTo(30,400);
          ctx.lineTo(460,400);
          ctx.lineWidth = 25;
          ctx.stroke();
 
+
+
          let timer = setInterval(line, 20);
          let progress = 0;
 
          function line() {
              let pr = progress * 0.2;
-             //let xS = 30 + pr;
-             //let yS = 400;
-             //let xE = xS + 15;
-             //let yE = 400;
-             let gradient = ctx.createLinearGradient(xS,yS,xE,yE);
 
+             if(pr >= 360){
+                 ctx.fillStyle = 'red';
+                 ctx.font = '10pt calibri';
+                 ctx.fillText('You are running out of time!', 200,200);
+                 /*let count = 10,
+                     timer = setInterval(function() {
+                         count--;
+                         if( count%2 == 1) {
+                             ctx.fillStyle = 'red';
+                             ctx.fillText('You are running out of time!', 200,200);
+                         }
+                         else {
+                             ctx.fillStyle = 'white';
+                             ctx.fillText('You are running out of time!', 200,200);
+                         }
+                         if( count == 0) clearInterval(timer);
+                     },1000);*/
+             }
              ctx.beginPath();
-             if(pr >= 200 && pr <= 350){
-                 //gradient.addColorStop(0, "green");
-                 //gradient.addColorStop(0.1, "red");
-
-                 ctx.strokeStyle = 'green';
-
-             }
-             else if(pr >= 350){
-                 ctx.strokeStyle = 'red';
-             }
-             else{
-                 ctx.strokeStyle = 'black';
-             }
+             ctx.strokeStyle = 'grey';
              ctx.lineCap="round";
              ctx.moveTo(30 + pr,400);
              ctx.lineTo(30 + pr + 15,400);
              ctx.lineWidth = 20;
              ctx.stroke();
+
              progress++;
              if(pr >= 415){
                  clearInterval(timer);
              }
+             ctx.fillStyle = 'black';
+             ctx.font = 'italic';
+             ctx.fillText('Your time', 30,400);
          }
-
      }
+
 //     function reset() {
 //         // TODO: Reset the board after win/lose
 //     }
@@ -186,7 +195,7 @@
         }
         // console.log(arr); // For debugging purposes. Must be removed at some point
     }
+    timeLine();
+    window.drawImages = drawCards();
 
-    window.drawImages = drawCards()
-    
 })( window );
