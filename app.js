@@ -1,8 +1,9 @@
-;(function( window ) {
+function main() {
 
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
     let imageSize = 90;
+    let arr = []; // TODO: For what do we need object
 
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
@@ -13,11 +14,9 @@
     function onCanvasClick(e) {
         let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
         let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
-        if(row >= 0 && row < 4 && col >= 0 && col < 5){
+        if ((row >= 0 && row < 4) && (col >= 0 && col < 5))
             alert(row + "," + col);
-        }
-
-        return [row, col];
+        //return [row, col]; // TODO: return to where
     }
     function getCursorPosition(e) {
         let x;
@@ -159,15 +158,14 @@
 //     ctx.restore();
 // }
     function drawCards() {
-        // let iterator = 0; // TODO: What is the purpose for this
-        // let arr = []; // TODO: For what do we need object
+        let iterator = 0; // TODO: What is the purpose for this
 
-        let imgArr = ['nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon', 'televizor', 'ViktorKazakov',
-            'ViktorKostadinov', 'nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon', 'televizor',
-            'ViktorKazakov', 'ViktorKostadinov'];
+        let imgArr = ['nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon',
+            'televizor', 'ViktorKazakov', 'ViktorKostadinov', 'nakov', 'rakia', 'royal', 'salata',
+            'SoftUni', 'SoftUni', 'simeon', 'televizor', 'ViktorKazakov', 'ViktorKostadinov'];
 
         for (let col = 0; col < 5; col++) {
-            // arr[col] = [];
+            arr[col] = [];
             for (let row = 0; row < 4; row++) {
 
                 let startX = 20 + col * imageSize;
@@ -181,21 +179,28 @@
                 // TODO: Check out the properties for the img class for attach styling to them
                 imgArr.splice(rngIndex, 1); // Shrinks the array to get correct img
 
-                // arr[col][row] = {
-                //         img:img,
-                //         id: iterator, // TODO: What is the purpose for this
-                //         isFlipped: false,
-                //         startPointX : startX,
-                //         startPointY : startY
-                // };
+                arr[col][row] = {
+                        img:img,
+                        id: iterator, // TODO: What is the purpose for this
+                        isFlipped: false,
+                        startPointX : startX,
+                        startPointY : startY
+                };
 
-                ctx.beginPath();
-                ctx.drawImage(img, startX, startY); // Draws image
+            }
+        }
+
+        for (let col = 0; col < 5; col++) {
+            for (let row = 0; row < 4; row++) {
+                ctx.drawImage(arr[col][row].img, arr[col][row].startPointX, arr[col][row].startPointY); // Draws image
             }
         }
         // console.log(arr); // For debugging purposes. Must be removed at some point
     }
-    timeLine();
-    window.drawImages = drawCards();
 
-})( window );
+    window.drawImages = drawCards();
+    window.loadingBar = timeLine();
+
+};
+
+setTimeout(main, 100);
