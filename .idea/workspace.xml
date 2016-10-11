@@ -36,17 +36,16 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="25" column="71" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+            <state relative-caret-position="404">
+              <caret line="226" column="41" selection-start-line="226" selection-start-column="41" selection-end-line="226" selection-end-column="41" />
               <folding>
                 <element signature="e#240#290#0" expanded="false" />
                 <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="e#2336#2386#0" expanded="false" />
-                <element signature="e#2515#2541#0" expanded="false" />
+                <element signature="e#2589#2639#0" expanded="false" />
+                <element signature="e#2768#2794#0" expanded="false" />
                 <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
                 <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="e#5527#5552#0" expanded="false" />
-                <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+                <element signature="e#5780#5805#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -273,12 +272,12 @@
       <workItem from="1476177059640" duration="6591000" />
       <workItem from="1476189867712" duration="1557000" />
       <workItem from="1476191566269" duration="4155000" />
-      <workItem from="1476195934752" duration="4554000" />
+      <workItem from="1476195934752" duration="5114000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45898000" />
+    <option name="totallyTimeSpent" value="46458000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -348,12 +347,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -385,12 +383,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -422,12 +419,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -459,12 +455,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -496,12 +491,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -533,12 +527,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -570,12 +563,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -607,12 +599,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -644,12 +635,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -681,12 +671,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -708,12 +697,11 @@
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -750,17 +738,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="25" column="71" selection-start-line="25" selection-start-column="71" selection-end-line="25" selection-end-column="71" />
+        <state relative-caret-position="404">
+          <caret line="226" column="41" selection-start-line="226" selection-start-column="41" selection-end-line="226" selection-end-column="41" />
           <folding>
             <element signature="e#240#290#0" expanded="false" />
             <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2336#2386#0" expanded="false" />
-            <element signature="e#2515#2541#0" expanded="false" />
+            <element signature="e#2589#2639#0" expanded="false" />
+            <element signature="e#2768#2794#0" expanded="false" />
             <element signature="n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#line#0;n#!!block;n#timeLine#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#5527#5552#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#5780#5805#0" expanded="false" />
           </folding>
         </state>
       </provider>

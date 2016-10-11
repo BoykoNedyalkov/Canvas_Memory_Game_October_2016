@@ -19,35 +19,41 @@ function main() {
         //if ((row >= 0 && row < 4) && (col >= 0 && col < 5))
         //    alert(row + "," + col);
         //return [row, col]; // TODO: return to where
-        let obj =  arr[col][row];
+        let obj = arr[col][row];
+        if (obj.isFlipped == false) {
             obj.isFlipped = true;
             flippedCards.push(obj);
             //alert(flippedCards.length);
             ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
-        //alert('length of array is ' + flippedCards.length);
-        if(flippedCards.length === 2){
+            //alert('length of array is ' + flippedCards.length);
+            if (flippedCards.length === 2) {
 
-            //alert('flipped cards = 2');
-            let firstImage = flippedCards[0];
-            let secondImage = flippedCards[1];
+                //alert('flipped cards = 2');
+                let firstImage = flippedCards[0];
+                let secondImage = flippedCards[1];
 
-            if(firstImage.name === secondImage.name){
-                //alert(firstImage.name+' + '+secondImage.name);
-                foundCards += 2;
-                //alert('match');
+                if (firstImage.name === secondImage.name) {
+                    //alert(firstImage.name+' + '+secondImage.name);
+                    foundCards += 2;
+                    //alert('match');
+                }
+                else {
+                    //alert('tuk');
+                    setTimeout(function () {
+                        flipBack(firstImage, secondImage);
+                    }, 1000);
+
+                }
+                flippedCards = [];
             }
-            else{
-            //alert('tuk');
-                setTimeout(function() { flipBack(firstImage,secondImage); }, 1000);
-
-            }
-            flippedCards=[];
         }
     }
 
     function flipBack(firstImage,secondImage) {
             ctx.drawImage(firstImage.img[1], firstImage.startPointX, firstImage.startPointY);
             ctx.drawImage(secondImage.img[1], secondImage.startPointX, secondImage.startPointY);
+            firstImage.isFlipped = false;
+            secondImage.isFlipped = false;
 
     }
     function getCursorPosition(e) {
