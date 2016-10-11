@@ -42,12 +42,12 @@ function main() {
         }
     }
     function flipBack(firstImage,secondImage) {
-        let time = setInterval(function () {
+        //let time = setInterval(function () {
             ctx.drawImage(firstImage.img[1], firstImage.startPointX, firstImage.startPointY);
             ctx.drawImage(secondImage.img[1], secondImage.startPointX, secondImage.startPointY);
             flippedCards = [];
             //alert(flippedCards.length);
-        },1000);
+        //},1000);
     }
     function getCursorPosition(e) {
         let x;
