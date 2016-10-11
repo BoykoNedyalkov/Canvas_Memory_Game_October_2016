@@ -23,27 +23,31 @@ function main() {
         obj.isFlipped = true;
         ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
         flippedCards.push(obj);
-        if(flippedCards.length == 2){
+        //alert('length of array is ' + flippedCards.length);
+        if(flippedCards.length === 2){
+            //alert('flipped cards = 2');
             let firstImage = flippedCards[0];
             let secondImage = flippedCards[1];
 
-            if(firstImage.name == secondImage.name){
-                alert(firstImage.name+' + '+secondImage.name)
-                foundCards ++;
+            if(firstImage.name === secondImage.name){
+                //alert(firstImage.name+' + '+secondImage.name);
+                foundCards += 2;
+                //alert('match');
             }
             else{
+            //alert('tuk');
                flipBack(firstImage,secondImage);
             }
             flippedCards=[];
         }
-        console.log(flippedCards)
     }
     function flipBack(firstImage,secondImage) {
         let time = setInterval(function () {
             ctx.drawImage(firstImage.img[1], firstImage.startPointX, firstImage.startPointY);
             ctx.drawImage(secondImage.img[1], secondImage.startPointX, secondImage.startPointY);
-            flippedCards= [];
-        },1000)
+            flippedCards = [];
+            //alert(flippedCards.length);
+        },1000);
     }
     function getCursorPosition(e) {
         let x;
