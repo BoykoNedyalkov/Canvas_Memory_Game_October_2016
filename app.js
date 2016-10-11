@@ -71,7 +71,7 @@
 //     }
 
 
-     function timeLine() {
+     function timeLine() {//In progress
 
          let ctx = document.getElementById("canvas").getContext("2d");
          ctx.beginPath();
