@@ -3,6 +3,8 @@ function main() {
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
     let imageSize = 90;
+    let foundCards = 0;
+    let flippedCards = [];
     let arr = []; // TODO: For what do we need object
 
 // function cls() { // TODO: For what is this func
@@ -14,9 +16,34 @@ function main() {
     function onCanvasClick(e) {
         let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
         let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
-        if ((row >= 0 && row < 4) && (col >= 0 && col < 5))
-            alert(row + "," + col);
+        //if ((row >= 0 && row < 4) && (col >= 0 && col < 5))
+        //    alert(row + "," + col);
         //return [row, col]; // TODO: return to where
+        let obj =  arr[col][row];
+        obj.isFlipped = true;
+        ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
+        flippedCards.push(obj);
+        if(flippedCards.length == 2){
+            let firstImage = flippedCards[0];
+            let secondImage = flippedCards[1];
+
+            if(firstImage.name == secondImage.name){
+                alert(firstImage.name+' + '+secondImage.name)
+                foundCards ++;
+            }
+            else{
+               flipBack(firstImage,secondImage);
+            }
+            flippedCards=[];
+        }
+        console.log(flippedCards)
+    }
+    function flipBack(firstImage,secondImage) {
+        let time = setInterval(function () {
+            ctx.drawImage(firstImage.img[1], firstImage.startPointX, firstImage.startPointY);
+            ctx.drawImage(secondImage.img[1], secondImage.startPointX, secondImage.startPointY);
+            flippedCards= [];
+        },1000)
     }
     function getCursorPosition(e) {
         let x;
@@ -175,6 +202,7 @@ function main() {
 
                 let front = new Image();
                 let back = new Image();
+                let string = `${imgArr[rngIndex]}`;
                 // Gets the image id from directory via relative path
                 front.src = `./images/90x90/${imgArr[rngIndex]}_90x90.jpg`;
                 back.src = `./images/90x90/SoftUni_90x90.jpg`;
@@ -182,6 +210,7 @@ function main() {
                 imgArr.splice(rngIndex, 1); // Shrinks the array to get correct img
 
                 arr[col][row] = {
+                        name: string,
                         img:[front, back],
                         id: iterator, // TODO: What is the purpose for this
                         isFlipped: false,
@@ -194,10 +223,11 @@ function main() {
 
         for (let col = 0; col < 5; col++) {
             for (let row = 0; row < 4; row++) {
-                ctx.drawImage(arr[col][row].img[0], arr[col][row].startPointX, arr[col][row].startPointY); // Draws image
+                ctx.drawImage(arr[col][row].img[1], arr[col][row].startPointX, arr[col][row].startPointY); // Draws
+                                                                                                           // image
             }
         }
-        // console.log(arr); // For debugging purposes. Must be removed at some point
+         console.log(arr); // For debugging purposes. Must be removed at some point
     }
 
     window.drawImages = drawCards();
