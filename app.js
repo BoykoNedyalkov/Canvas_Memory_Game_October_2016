@@ -76,7 +76,7 @@ function main() {
 
          //let ctx = document.getElementById("canvas").getContext("2d");
          ctx.beginPath();
-         ctx.strokeStyle = 'skyblue';
+         ctx.strokeStyle = 'grey';
          ctx.lineCap="round";
          ctx.moveTo(30,400);
          ctx.lineTo(460,400);
@@ -110,7 +110,7 @@ function main() {
                      },1000);*/
              }
              ctx.beginPath();
-             ctx.strokeStyle = 'grey';
+             ctx.strokeStyle = 'skyblue';
              ctx.lineCap="round";
              ctx.moveTo(30 + pr,400);
              ctx.lineTo(30 + pr + 15,400);
@@ -160,9 +160,9 @@ function main() {
     function drawCards() {
         let iterator = 0; // TODO: What is the purpose for this
 
-        let imgArr = ['nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon',
+        let imgArr = ['nakov', 'rakia', 'royal', 'salata', 'pornhub', 'beer', 'simeon',
             'televizor', 'ViktorKazakov', 'ViktorKostadinov', 'nakov', 'rakia', 'royal', 'salata',
-            'SoftUni', 'SoftUni', 'simeon', 'televizor', 'ViktorKazakov', 'ViktorKostadinov'];
+            'pornhub', 'beer', 'simeon', 'televizor', 'ViktorKazakov', 'ViktorKostadinov'];
 
         for (let col = 0; col < 5; col++) {
             arr[col] = [];
@@ -173,14 +173,16 @@ function main() {
 
                 let rngIndex = Math.floor((Math.random() * imgArr.length - 1) + 1);
 
-                let img = new Image();
+                let front = new Image();
+                let back = new Image();
                 // Gets the image id from directory via relative path
-                img.src = `./images/90x90/${imgArr[rngIndex]}_90x90.jpg`;
+                front.src = `./images/90x90/${imgArr[rngIndex]}_90x90.jpg`;
+                back.src = `./images/90x90/SoftUni_90x90.jpg`;
                 // TODO: Check out the properties for the img class for attach styling to them
                 imgArr.splice(rngIndex, 1); // Shrinks the array to get correct img
 
                 arr[col][row] = {
-                        img:img,
+                        img:[front, back],
                         id: iterator, // TODO: What is the purpose for this
                         isFlipped: false,
                         startPointX : startX,
@@ -192,7 +194,7 @@ function main() {
 
         for (let col = 0; col < 5; col++) {
             for (let row = 0; row < 4; row++) {
-                ctx.drawImage(arr[col][row].img, arr[col][row].startPointX, arr[col][row].startPointY); // Draws image
+                ctx.drawImage(arr[col][row].img[0], arr[col][row].startPointX, arr[col][row].startPointY); // Draws image
             }
         }
         // console.log(arr); // For debugging purposes. Must be removed at some point
