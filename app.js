@@ -35,6 +35,12 @@ function main() {
                 if (firstImage.name === secondImage.name) {
                     //alert(firstImage.name+' + '+secondImage.name);
                     foundCards += 2;
+                    if(foundCards == 20){
+                        setTimeout(function () {
+                            gameWon();
+                        }, 500);
+                        gameWon();
+                    }
                     //alert('match');
                 }
                 else {
@@ -239,6 +245,14 @@ function main() {
             }
         }
          console.log(arr); // For debugging purposes. Must be removed at some point
+    }
+
+    function gameWon() {
+        let winImg = new Image();
+        winImg.src = `./images/Win.png`;
+        ctx.drawImage(winImg, 20,20, 450, 360 );
+        setTimeout(function () {drawCards();
+        }, 4000);
     }
 
     window.drawImages = drawCards();
