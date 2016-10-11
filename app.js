@@ -181,7 +181,6 @@ function main() {
 
                 arr[col][row] = {
                         img:img,
-                        id: iterator, // TODO: What is the purpose for this
                         isFlipped: false,
                         startPointX : startX,
                         startPointY : startY
@@ -203,4 +202,4 @@ function main() {
 
 };
 
-setTimeout(main, 100);
+main()
