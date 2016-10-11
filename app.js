@@ -69,11 +69,56 @@
 //         }
 //         let sim = setInterval(progressSim, 50);
 //     }
-//     function displayScoreAndTime() {
-//         let ctx = document.getElementById("canvas").getContext("2d");
-//         ctx.moveTo()
-//
-//     }
+
+
+     function timeLine() {
+
+         let ctx = document.getElementById("canvas").getContext("2d");
+         ctx.beginPath();
+         ctx.strokeStyle = 'yellow';
+         ctx.lineCap="round";
+         ctx.moveTo(30,400);
+         ctx.lineTo(460,400);
+         ctx.lineWidth = 25;
+         ctx.stroke();
+
+         let timer = setInterval(line, 20);
+         let progress = 0;
+
+         function line() {
+             let pr = progress * 0.2;
+             //let xS = 30 + pr;
+             //let yS = 400;
+             //let xE = xS + 15;
+             //let yE = 400;
+             let gradient = ctx.createLinearGradient(xS,yS,xE,yE);
+
+             ctx.beginPath();
+             if(pr >= 200 && pr <= 350){
+                 //gradient.addColorStop(0, "green");
+                 //gradient.addColorStop(0.1, "red");
+
+                 ctx.strokeStyle = 'green';
+
+             }
+             else if(pr >= 350){
+                 ctx.strokeStyle = 'red';
+             }
+             else{
+                 ctx.strokeStyle = 'black';
+             }
+             ctx.lineCap="round";
+             ctx.moveTo(30 + pr,400);
+             ctx.lineTo(30 + pr + 15,400);
+             ctx.lineWidth = 20;
+             ctx.stroke();
+             progress++;
+             if(pr >= 415){
+                 clearInterval(timer);
+             }
+         }
+
+     }
 //     function reset() {
 //         // TODO: Reset the board after win/lose
 //     }
