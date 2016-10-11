@@ -20,11 +20,13 @@ function main() {
         //    alert(row + "," + col);
         //return [row, col]; // TODO: return to where
         let obj =  arr[col][row];
-        obj.isFlipped = true;
-        ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
-        flippedCards.push(obj);
+            obj.isFlipped = true;
+            flippedCards.push(obj);
+            //alert(flippedCards.length);
+            ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
         //alert('length of array is ' + flippedCards.length);
         if(flippedCards.length === 2){
+
             //alert('flipped cards = 2');
             let firstImage = flippedCards[0];
             let secondImage = flippedCards[1];
@@ -36,18 +38,17 @@ function main() {
             }
             else{
             //alert('tuk');
-               flipBack(firstImage,secondImage);
+                setTimeout(function() { flipBack(firstImage,secondImage); }, 1000);
+
             }
             flippedCards=[];
         }
     }
+
     function flipBack(firstImage,secondImage) {
-        //let time = setInterval(function () {
             ctx.drawImage(firstImage.img[1], firstImage.startPointX, firstImage.startPointY);
             ctx.drawImage(secondImage.img[1], secondImage.startPointX, secondImage.startPointY);
-            flippedCards = [];
-            //alert(flippedCards.length);
-        //},1000);
+
     }
     function getCursorPosition(e) {
         let x;
@@ -237,5 +238,5 @@ function main() {
     window.drawImages = drawCards();
     window.loadingBar = timeLine();
 
-};
+}
 setTimeout(main, 100);
