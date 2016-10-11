@@ -1,39 +1,40 @@
+;(function( window ) {
 
-let canvas = document.getElementById("canvas");
-let ctx = canvas.getContext("2d");
-let imageSize = 90;
+    let canvas = document.getElementById("canvas");
+    let ctx = canvas.getContext("2d");
+    let imageSize = 90;
 
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
 // }
 
-canvas.addEventListener("click", onCanvasClick);
+    window.addEventListener("click", onCanvasClick);
 
-function onCanvasClick(e) {
-    let row = Math.floor((getCursorPosition(e)[1]-20)/imageSize);
-    let col = Math.floor((getCursorPosition(e)[0]-20)/imageSize);
-    alert(row+ "," +col);
-    return[row,col];
-}
-
-function getCursorPosition(e) {
-    let x;
-    let y;
-    if (e.pageX != undefined && e.pageY != undefined) {
-        x = e.pageX;
-        y = e.pageY;
+    function onCanvasClick(e) {
+        let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
+        let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
+        alert(row + "," + col);
+        return [row, col];
     }
-    else {
-        x = e.clientX + document.body.scrollLeft +
-            document.documentElement.scrollLeft;
-        y = e.clientY + document.body.scrollTop +
-            document.documentElement.scrollTop;
-    }
-    x -= canvas.offsetLeft;
-    y -= canvas.offsetTop;
 
-    return [x,y];
-}
+    function getCursorPosition(e) {
+        let x;
+        let y;
+        if (e.pageX != undefined && e.pageY != undefined) {
+            x = e.pageX;
+            y = e.pageY;
+        }
+        else {
+            x = e.clientX + document.body.scrollLeft +
+                document.documentElement.scrollLeft;
+            y = e.clientY + document.body.scrollTop +
+                document.documentElement.scrollTop;
+        }
+        x -= canvas.offsetLeft;
+        y -= canvas.offsetTop;
+
+        return [x, y];
+    }
 
 // function res() { // TODO: for what is this func
 //     ctx.fillStyle = 'white';
@@ -103,41 +104,44 @@ function getCursorPosition(e) {
 //
 //     ctx.restore();
 // }
-function drawCards(){
-    // let iterator = 0; // TODO: What is the purpose for this
-    // let arr = []; // TODO: For what do we need object
+    function drawCards() {
+        // let iterator = 0; // TODO: What is the purpose for this
+        // let arr = []; // TODO: For what do we need object
 
-    let imgArr =['nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon', 'televizor', 'ViktorKazakov',
-        'ViktorKostadinov', 'nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon', 'televizor',
-        'ViktorKazakov', 'ViktorKostadinov'];
+        let imgArr = ['nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon', 'televizor', 'ViktorKazakov',
+            'ViktorKostadinov', 'nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon', 'televizor',
+            'ViktorKazakov', 'ViktorKostadinov'];
 
-    for (let col = 0; col < 5 ; col++) {
-        // arr[col] = [];
-        for (let row = 0; row < 4 ; row++) {
+        for (let col = 0; col < 5; col++) {
+            // arr[col] = [];
+            for (let row = 0; row < 4; row++) {
 
-            let startX= 20+col*imageSize;
-            let startY= 20+row*imageSize;
+                let startX = 20 + col * imageSize;
+                let startY = 20 + row * imageSize;
 
-            let rngIndex = Math.floor((Math.random() * imgArr.length-1) + 1);
+                let rngIndex = Math.floor((Math.random() * imgArr.length - 1) + 1);
 
-            let img = new Image();
-            // Gets the image id from directory via relative path
-            img.src = `./images/90x90/${imgArr[rngIndex]}_90x90.jpg`;
-            // TODO: Check out the properties for the img class for attach styling to them
-            imgArr.splice(rngIndex,1); // Shrinks the array to get correct img
+                let img = new Image();
+                // Gets the image id from directory via relative path
+                img.src = `./images/90x90/${imgArr[rngIndex]}_90x90.jpg`;
+                // TODO: Check out the properties for the img class for attach styling to them
+                imgArr.splice(rngIndex, 1); // Shrinks the array to get correct img
 
-            // arr[col][row] = {
-            //         img:img,
-            //         id: iterator, // TODO: What is the purpose for this
-            //         isFlipped: false,
-            //         startPointX : startX,
-            //         startPointY : startY
-            // };
-            
-            ctx.beginPath();
-            ctx.drawImage(img,startX,startY); // Draws image
+                // arr[col][row] = {
+                //         img:img,
+                //         id: iterator, // TODO: What is the purpose for this
+                //         isFlipped: false,
+                //         startPointX : startX,
+                //         startPointY : startY
+                // };
+
+                ctx.beginPath();
+                ctx.drawImage(img, startX, startY); // Draws image
+            }
         }
+        // console.log(arr); // For debugging purposes. Must be removed at some point
     }
-    // console.log(arr); // For debugging purposes. Must be removed at some point
-}
-drawCards();
+
+    window.drawImages = drawCards()
+    
+})( window );
