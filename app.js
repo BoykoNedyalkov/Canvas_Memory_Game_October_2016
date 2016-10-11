@@ -104,12 +104,12 @@ function getCursorPosition(e) {
 //     ctx.restore();
 // }
 function drawCards(){
-    let iterator = 0; // TODO: What is the purpose for this
+    // let iterator = 0; // TODO: What is the purpose for this
     // let arr = []; // TODO: For what do we need object
 
-    let imgArr =['nakov', 'rakia', 'royal', 'salata', 'softUni', 'softUni1', 'simeon', 'televizor', 'kazakov',
-        'kostadinov', 'nakov', 'rakia', 'royal', 'salata', 'softUni', 'softUni1', 'simeon', 'televizor',
-        'kazakov', 'kostadinov'];
+    let imgArr =['nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon', 'televizor', 'ViktorKazakov',
+        'ViktorKostadinov', 'nakov', 'rakia', 'royal', 'salata', 'SoftUni', 'SoftUni', 'simeon', 'televizor',
+        'ViktorKazakov', 'ViktorKostadinov'];
 
     for (let col = 0; col < 5 ; col++) {
         // arr[col] = [];
@@ -119,9 +119,11 @@ function drawCards(){
             let startY= 20+row*imageSize;
 
             let randomNum = Math.floor((Math.random() * imgArr.length-1) + 1);
-            let img = imgArr[randomNum];
-            let imageToDraw = document.getElementById(img); // Gets the image id from doc
-            imgArr.splice(imgArr.indexOf(img),1); // Shrinks the array to get correct img
+
+            let img = new Image();
+            // Gets the image id from directory via relative path
+            img.src = `./images/90x90/${imgArr[randomNum]}_90x90.jpg`;
+            imgArr.splice(imgArr.indexOf(imgArr[randomNum]),1); // Shrinks the array to get correct img
 
             // arr[col][row] = {
             //         img:img,
@@ -132,7 +134,7 @@ function drawCards(){
             // };
             
             ctx.beginPath();
-            ctx.drawImage(imageToDraw,startX,startY); // Draws image
+            ctx.drawImage(img,startX,startY); // Draws image
         }
     }
     // console.log(arr); // For debugging purposes. Must be removed at some point
