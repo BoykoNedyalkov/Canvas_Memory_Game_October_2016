@@ -93,8 +93,8 @@ function main() {
 
              if(pr >= 360){
                  ctx.fillStyle = 'red';
-                 ctx.font = '10pt calibri';
-                 ctx.fillText('You are running out of time!', 200,200);
+                 ctx.font = '15pt italic';
+                 ctx.fillText('You are running out of time!', 150,200);
                  /*let count = 10,
                      timer = setInterval(function() {
                          count--;
@@ -122,7 +122,7 @@ function main() {
                  clearInterval(timer);
              }
              ctx.fillStyle = 'black';
-             ctx.font = 'italic';
+             ctx.font = '10pt italic';
              ctx.fillText('Your time', 30,400);
          }
      }
@@ -202,5 +202,4 @@ function main() {
     window.loadingBar = timeLine();
 
 };
-
 setTimeout(main, 100);
