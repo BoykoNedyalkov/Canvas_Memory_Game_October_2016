@@ -118,12 +118,13 @@ function drawCards(){
             let startX= 20+col*imageSize;
             let startY= 20+row*imageSize;
 
-            let randomNum = Math.floor((Math.random() * imgArr.length-1) + 1);
+            let rngIndex = Math.floor((Math.random() * imgArr.length-1) + 1);
 
             let img = new Image();
             // Gets the image id from directory via relative path
-            img.src = `./images/90x90/${imgArr[randomNum]}_90x90.jpg`;
-            imgArr.splice(imgArr.indexOf(imgArr[randomNum]),1); // Shrinks the array to get correct img
+            img.src = `./images/90x90/${imgArr[rngIndex]}_90x90.jpg`;
+            // TODO: Check out the properties for the img class for attach styling to them
+            imgArr.splice(rngIndex,1); // Shrinks the array to get correct img
 
             // arr[col][row] = {
             //         img:img,
