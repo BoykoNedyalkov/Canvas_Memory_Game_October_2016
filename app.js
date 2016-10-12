@@ -17,6 +17,11 @@ function main() {
         let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
         let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
 
+        // To not throw exception in console if it is not within the array with images
+        if (!(row >= 0 && row < 4 && col >= 0 && col < 5)){
+            return
+        }
+
         let obj = arr[col][row];
         if (obj.isFlipped == false) {
 
@@ -194,6 +199,7 @@ function main() {
             'televizor', 'ViktorKazakov', 'ViktorKostadinov', 'nakov', 'rakia', 'royal', 'salata',
             'pornhub', 'beer', 'simeon', 'televizor', 'ViktorKazakov', 'ViktorKostadinov'];
 
+        // Load images for cards
         for (let col = 0; col < 5; col++) {
             arr[col] = [];
             for (let row = 0; row < 4; row++) {
@@ -221,18 +227,20 @@ function main() {
                 };
             }
         }
-    }
 
-    function drawCards() {
-        loadImages();
-        // Draws images back for setting the game
-        arr.forEach(row => row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY)));
-
-        // TODO: ...
-        // winning img
+        // Load winning image
         let winImg = new Image();
         winImg.src = `./images/Win.png`;
         arr.push({ win: winImg });
+    }
+
+    function drawCards() {
+
+        loadImages();
+        // Draws images back for setting the game without winning image
+        arr.forEach(row => arr.indexOf(row) < 5 ?
+                    row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY))
+                    : false);
 
         console.log(arr); // For debugging purposes. Must be removed at some point
     }
