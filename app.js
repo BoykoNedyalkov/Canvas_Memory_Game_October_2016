@@ -172,9 +172,6 @@ function main() {
          }
      }
 
-//     function reset() {
-//         // TODO: Reset the board after win/lose
-//     }
 // function grid() {
 //     TODO: It is not needed for the moment
 //     ctx.save();
@@ -248,10 +245,11 @@ function main() {
         let winImg = new Image();
         winImg.src = `./images/Win.png`;
         ctx.drawImage( winImg, 20,20, 450, 360 );
-        setTimeout( () => refreshGame(), 4000 );
+        // TODO: Make it if the player wants to reset the game
+        setTimeout( () => resetGame(), 4000 );
     }
 
-    function refreshGame() {
+    function resetGame() {
         // TODO: Can we make it to have no repetition with window
         window.drawImages = drawCards();
         window.loadingBar = timeLine();
