@@ -43,7 +43,7 @@ function main() {
         if (!(row >= 0 && row < 4 && col >= 0 && col < 5)){
             return
         }
-       // drawOutline();
+
         flipCards( col, row );
         }
     }
@@ -202,8 +202,8 @@ function main() {
             arr[col] = [];
             for (let row = 0; row < 4; row++) {
 
-                let startX = 20 + col * imageSize;
-                let startY = 20 + row * imageSize;
+                let startX = 10 + col * imageSize;
+                let startY = 10 + row * imageSize;
 
                 let rngIndex = Math.floor((Math.random() * imgArr.length - 1) + 1);
 
@@ -221,7 +221,10 @@ function main() {
                         img:[front, back],
                         isFlipped: false,
                         startPointX : startX,
-                        startPointY : startY
+                        startPointY : startY,
+                        borderStartX: startX-5,
+                        borderStartY: startY-5
+
                 };
             }
         }
@@ -237,28 +240,9 @@ function main() {
         arr.forEach(row => arr.indexOf(row) < 5 ?
                     row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY))
                     : false);
-
        // console.log(arr); // For debugging purposes. Must be removed at some point
     }
-    function drawOutline(){
-        let x = 20;
-        let y = 20;
-        for (let i = 1; i <=5 ; i++) {
-            for (let j = 1; j <= 4; j++) {
-                //ctx.moveTo(x,y);
-                ctx.strokeStyle = '#244264';
-                ctx.beginPath();
-                ctx.moveTo(x,y);
-                ctx.lineTo(x+90*i,y);
-                ctx.lineTo(x+90*i,y+90*j);
-                ctx.lineTo(x,y+90*j);
-                ctx.lineTo(x,y);
-                ctx.stroke()
 
-            }
-
-        }
-    }
     function gameWon() {
 
         ctx.drawImage( winImage, 20, 20, 450, 360 );
@@ -292,7 +276,7 @@ function main() {
     }
 
     setGame()
-    //drawOutline()
+
     //grid();
 }
 
