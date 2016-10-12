@@ -48,6 +48,7 @@ function main() {
 
         flipCards( col, row );
         }
+
         if(!click && hasRestartButton == true){
             let x = getCursorPosition(e)[0];
             let y = getCursorPosition(e)[1];
@@ -182,32 +183,32 @@ function main() {
          }
      }
 
- function grid() {
+    function grid() {
 
-     ctx.save();
+         ctx.save();
 
-     ctx.strokeStyle = 'grey';
-     ctx.lineWidth = 0.25;
-     for (let row = 0; row < 60; row++) {
-         if (row % 5 == 0) ctx.lineWidth = 0.5;
-         if (row % 10 == 0) ctx.lineWidth = 1;
-         ctx.beginPath();
-         ctx.moveTo(0, row * 10);
-         ctx.lineTo(800, row * 10);
-         ctx.stroke();
-         if (row % 5 == 0) ctx.lineWidth = 0.25;
+         ctx.strokeStyle = 'grey';
+         ctx.lineWidth = 0.25;
+         for (let row = 0; row < 60; row++) {
+             if (row % 5 == 0) ctx.lineWidth = 0.5;
+             if (row % 10 == 0) ctx.lineWidth = 1;
+             ctx.beginPath();
+             ctx.moveTo(0, row * 10);
+             ctx.lineTo(800, row * 10);
+             ctx.stroke();
+             if (row % 5 == 0) ctx.lineWidth = 0.25;
+         }
+         for (let col = 0; col < 80; col++) {
+             if (col % 5 == 0) ctx.lineWidth = 0.5;
+             if (col % 10 == 0) ctx.lineWidth = 1;
+             ctx.beginPath();
+             ctx.moveTo(col * 10, 0);
+             ctx.lineTo(col * 10, 600);
+             ctx.stroke();
+             if (col % 5 == 0) ctx.lineWidth = 0.25;
+         }
+         ctx.restore();
      }
-     for (let col = 0; col < 80; col++) {
-         if (col % 5 == 0) ctx.lineWidth = 0.5;
-         if (col % 10 == 0) ctx.lineWidth = 1;
-         ctx.beginPath();
-         ctx.moveTo(col * 10, 0);
-         ctx.lineTo(col * 10, 600);
-         ctx.stroke();
-         if (col % 5 == 0) ctx.lineWidth = 0.25;
-     }
-     ctx.restore();
- }
 
     function loadImages() {
         let imgArr = ['nakov', 'rakia', 'royal', 'salata', 'pornhub', 'beer', 'simeon',
@@ -260,6 +261,7 @@ function main() {
         gameOverImage.src = './images/gameOver.jpg';
         arr.push(gameOverImage)
     }
+
     function drawCards() {
 
         // Gets only images for the cards
@@ -279,7 +281,7 @@ function main() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         gameIsWon = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+        
         let rngWinIndex = Math.floor(Math.random() * 2);
         ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
 
@@ -320,8 +322,8 @@ function main() {
 
     function restart() {
 
-        window.addEventListener("click", onCanvasClick);
-        click = true;
+        // window.addEventListener("click", onCanvasClick);
+        // click = true;
     }
 
     function gameOver() {
@@ -360,14 +362,15 @@ function main() {
         hasRestartButton = false;
         click = true;
         setTimeout(playBackground, 500);
+
         function playBackground() {
+            // TODO: It should be outside
             setTimeout(backgroundAudio.play(), 500);
             audioLost.pause();
             audioLost.currentTime = 0;
             audioWin.pause();
             audioWin.currentTime = 0;
         }
-
     }
 
     setGame();
