@@ -13,6 +13,25 @@ function main() {
 
     window.addEventListener("click", onCanvasClick);
 
+    function getCursorPosition(e) {
+        let x;
+        let y;
+        if (e.pageX != undefined && e.pageY != undefined) {
+            x = e.pageX;
+            y = e.pageY;
+        }
+        else {
+            x = e.clientX + document.body.scrollLeft +
+                document.documentElement.scrollLeft;
+            y = e.clientY + document.body.scrollTop +
+                document.documentElement.scrollTop;
+        }
+        x -= canvas.offsetLeft;
+        y -= canvas.offsetTop;
+
+        return [x, y];
+    }
+
     function onCanvasClick(e) {
         let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
         let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
@@ -21,6 +40,11 @@ function main() {
         if (!(row >= 0 && row < 4 && col >= 0 && col < 5)){
             return
         }
+
+        flipCards( col, row );
+    }
+
+    function flipCards( col, row ) {
 
         let obj = arr[col][row];
         if (obj.isFlipped == false) {
@@ -57,25 +81,6 @@ function main() {
             secondImage.isFlipped = false;
     }
 
-    function getCursorPosition(e) {
-        let x;
-        let y;
-        if (e.pageX != undefined && e.pageY != undefined) {
-            x = e.pageX;
-            y = e.pageY;
-        }
-        else {
-            x = e.clientX + document.body.scrollLeft +
-                document.documentElement.scrollLeft;
-            y = e.clientY + document.body.scrollTop +
-                document.documentElement.scrollTop;
-        }
-        x -= canvas.offsetLeft;
-        y -= canvas.offsetTop;
-
-        return [x, y];
-    }
-
 // function res() { // TODO: for what is this func
 //     ctx.fillStyle = 'white';
 //     ctx.strokeStyle = ' black';
@@ -109,7 +114,6 @@ function main() {
 //         }
 //         let sim = setInterval(progressSim, 50);
 //     }
-
 
      function timeLine() {//In progress
 
