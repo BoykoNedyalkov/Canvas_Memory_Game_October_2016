@@ -10,6 +10,7 @@ function main() {
     let backgroundAudio = document.getElementById("backgroundMusic");
     let audioWin = document.getElementById("gameWon");
     let audioLost = document.getElementById("gameLost");
+    let flipCardAudio = document.getElementById("cardFlip");
     let hasRestartButton = false;
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
@@ -50,6 +51,7 @@ function main() {
             let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
             let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
 
+
         // To not throw exception in console if it is not within the array with images
             if (!(row >= 0 && row < 4 && col >= 0 && col < 5)){
                 return
@@ -63,11 +65,16 @@ function main() {
     function flipCards( col, row ) {
         let obj = arr[col][row];
         if (obj.isFlipped == false) {
-
             obj.isFlipped = true;
             flippedCards.push(obj);
             ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
 
+            function playFlipCardSound() {
+                flipCardAudio.pause();
+                flipCardAudio.currentTime = 0;
+                flipCardAudio.play();
+            }
+            playFlipCardSound();
             if (flippedCards.length == 2) {
                 let firstImage = flippedCards[0];
                 let secondImage = flippedCards[1];
@@ -351,13 +358,14 @@ click = true;
     function setGame() {
         loadImages();
         gameIsWon = false;
-        setTimeout( drawCards, 183 );
-        setTimeout( timeLine, 183 );
+        setTimeout( drawCards, 300 );
+        setTimeout( timeLine, 300 );
         hasRestartButton = false;
         click = true;
         setTimeout(playBackground, 500);
         function playBackground() {
-            setTimeout(backgroundAudio.play(), 500);
+            backgroundAudio.volume = 0.5;
+            backgroundAudio.play();
             audioLost.pause();
             audioLost.currentTime = 0;
             audioWin.pause();
