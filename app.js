@@ -138,19 +138,7 @@ function main() {
                  ctx.fillStyle = 'red';
                  ctx.font = '15pt italic';
                  ctx.fillText('You are running out of time!', 150,200);
-                 /*let count = 10,
-                     timer = setInterval(function() {
-                         count--;
-                         if( count%2 == 1) {
-                             ctx.fillStyle = 'red';
-                             ctx.fillText('You are running out of time!', 200,200);
-                         }
-                         else {
-                             ctx.fillStyle = 'white';
-                             ctx.fillText('You are running out of time!', 200,200);
-                         }
-                         if( count == 0) clearInterval(timer);
-                     },1000);*/
+               
              }
              ctx.beginPath();
              ctx.strokeStyle = 'skyblue';
