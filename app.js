@@ -290,7 +290,7 @@ click = true;
         gameIsWon = true;
 
         let rngWinIndex = Math.floor(Math.random() * 2);
-        ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
+        ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 380 );
         backgroundAudio.pause();
        //arr = [];
         setTimeout(playWinAudio, 500);

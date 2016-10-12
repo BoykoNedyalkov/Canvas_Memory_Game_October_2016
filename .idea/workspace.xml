@@ -21,7 +21,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="187">
@@ -35,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2369">
-              <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
+            <state relative-caret-position="183">
+              <caret line="292" column="59" selection-start-line="292" selection-start-column="59" selection-end-line="292" selection-end-column="59" />
               <folding>
                 <element signature="e#3603#3629#0" expanded="false" />
                 <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
@@ -47,7 +47,6 @@
                 <element signature="e#7368#8564#0" expanded="false" />
                 <element signature="e#8756#8863#0" expanded="false" />
                 <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
                 <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
                 <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
                 <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -300,12 +299,12 @@
       <workItem from="1476296336105" duration="12000" />
       <workItem from="1476296369952" duration="1612000" />
       <workItem from="1476298153264" duration="1089000" />
-      <workItem from="1476304408091" duration="3337000" />
+      <workItem from="1476304408091" duration="3808000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76172000" />
+    <option name="totallyTimeSpent" value="76643000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -387,7 +386,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -418,7 +416,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -450,7 +447,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -487,7 +483,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -519,7 +514,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -551,7 +545,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -583,7 +576,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -615,7 +607,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -647,7 +638,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -679,7 +669,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -711,7 +700,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -743,7 +731,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -775,7 +762,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -795,7 +781,6 @@
             <element signature="e#7368#8564#0" expanded="false" />
             <element signature="e#8756#8863#0" expanded="false" />
             <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
@@ -825,25 +810,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2369">
-          <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding>
-            <element signature="e#3603#3629#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#7368#8564#0" expanded="false" />
-            <element signature="e#8756#8863#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameWon#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -852,6 +818,24 @@
             <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#1;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="292" column="59" selection-start-line="292" selection-start-column="59" selection-end-line="292" selection-end-column="59" />
+          <folding>
+            <element signature="e#3603#3629#0" expanded="false" />
+            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#7368#8564#0" expanded="false" />
+            <element signature="e#8756#8863#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#gameOver#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
