@@ -19,35 +19,48 @@ function main() {
         //if ((row >= 0 && row < 4) && (col >= 0 && col < 5))
         //    alert(row + "," + col);
         //return [row, col]; // TODO: return to where
-        let obj =  arr[col][row];
-        obj.isFlipped = true;
-        ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
-        flippedCards.push(obj);
-        //alert('length of array is ' + flippedCards.length);
-        if(flippedCards.length === 2){
-            //alert('flipped cards = 2');
-            let firstImage = flippedCards[0];
-            let secondImage = flippedCards[1];
+        let obj = arr[col][row];
+        if (obj.isFlipped == false) {
+            obj.isFlipped = true;
+            flippedCards.push(obj);
+            //alert(flippedCards.length);
+            ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
+            //alert('length of array is ' + flippedCards.length);
+            if (flippedCards.length === 2) {
 
-            if(firstImage.name === secondImage.name){
-                //alert(firstImage.name+' + '+secondImage.name);
-                foundCards += 2;
-                //alert('match');
+                //alert('flipped cards = 2');
+                let firstImage = flippedCards[0];
+                let secondImage = flippedCards[1];
+
+                if (firstImage.name === secondImage.name) {
+                    //alert(firstImage.name+' + '+secondImage.name);
+                    foundCards += 2;
+                    if(foundCards == 20){
+                        setTimeout(function () {
+                            gameWon();
+                        }, 500);
+                        gameWon();
+                    }
+                    //alert('match');
+                }
+                else {
+                    //alert('tuk');
+                    setTimeout(function () {
+                        flipBack(firstImage, secondImage);
+                    }, 1000);
+
+                }
+                flippedCards = [];
             }
-            else{
-            //alert('tuk');
-               flipBack(firstImage,secondImage);
-            }
-            flippedCards=[];
         }
     }
+
     function flipBack(firstImage,secondImage) {
-        //let time = setInterval(function () {
             ctx.drawImage(firstImage.img[1], firstImage.startPointX, firstImage.startPointY);
             ctx.drawImage(secondImage.img[1], secondImage.startPointX, secondImage.startPointY);
-            flippedCards = [];
-            //alert(flippedCards.length);
-        //},1000);
+            firstImage.isFlipped = false;
+            secondImage.isFlipped = false;
+
     }
     function getCursorPosition(e) {
         let x;
@@ -232,6 +245,14 @@ function main() {
             }
         }
          console.log(arr); // For debugging purposes. Must be removed at some point
+    }
+
+    function gameWon() {
+        let winImg = new Image();
+        winImg.src = `./images/Win.png`;
+        ctx.drawImage(winImg, 20,20, 450, 360 );
+        setTimeout(function () {drawCards();
+        }, 4000);
     }
 
     window.drawImages = drawCards();
