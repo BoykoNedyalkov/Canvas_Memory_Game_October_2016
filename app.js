@@ -244,6 +244,7 @@ function main() {
     }
 
     function gameWon() {
+        let winAudio = new
 
         ctx.drawImage( winImage, 20, 20, 450, 360 );
         arr = [];
