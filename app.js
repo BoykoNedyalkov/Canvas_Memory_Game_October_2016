@@ -8,7 +8,6 @@ function main() {
     let flippedCards = [];
     let arr = [];
     let click = true;
-
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
 // }
@@ -45,6 +44,14 @@ function main() {
         }
 
         flipCards( col, row );
+        }
+        if(!click){
+            let x = getCursorPosition(e)[0];
+            let y = getCursorPosition(e)[1];
+            if(x >= canvas.width / 2 - 100 && x <= canvas.width / 2 + 100
+                && y >= 60 && y <= 100){
+                location.reload();
+            }
         }
     }
 
@@ -129,7 +136,6 @@ function main() {
          ctx.lineTo(460,450);
          ctx.lineWidth = 25;
          ctx.stroke();
-
 
 
          let timer = setInterval(line, 20);
@@ -224,7 +230,6 @@ function main() {
                         startPointY : startY,
                         borderStartX: startX-5,
                         borderStartY: startY-5
-
                 };
             }
         }
@@ -247,7 +252,25 @@ function main() {
         ctx.drawImage( arr[5].win, 10, 10, 500, 400 );
         arr = [];
         // TODO: Make it if the player wants to reset the game
-        //setTimeout( () => setGame(), 4000 );
+        setTimeout( () => setGame(), 4000 );
+    }
+    function restartButton(x) {
+        ctx.strokeStyle = 'grey';
+        ctx.lineCap = 'square';
+        ctx.lineWidth = 40;
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 2 - x,80);
+        ctx.lineTo(canvas.width / 2 + x,80);
+        ctx.stroke();
+        ctx.fillStyle = 'purple';
+        ctx.font = "23px italic";
+        ctx.textAlign = 'center';
+        ctx.textBaseline = 'middle';
+        ctx.fillText("Restart Game", canvas.width / 2,80);
+    }
+    function restart() {
+        window.addEventListener("click", onCanvasClick);
+        click = true;
     }
     function gameOver() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -260,12 +283,12 @@ function main() {
         let timer = setInterval(animateWords, 10);
         function animateWords() {
             pos += 0.3;
-            ctx.font = '40pt sans';
-            ctx.fillStyle = 'red';
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(gameoverImage, 0,0);
+            restartButton(80);
+            ctx.font = '40pt sans';
+            ctx.fillStyle = 'red';
             ctx.fillText("Счупи се телевизора", pos, 200);
-
         }
     }
     function setGame() {
@@ -273,10 +296,7 @@ function main() {
         window.drawImages = drawCards();
         window.loadingBar = timeLine();
     }
-
-    setGame()
-   
-
+    setGame();
     //grid();
 }
 

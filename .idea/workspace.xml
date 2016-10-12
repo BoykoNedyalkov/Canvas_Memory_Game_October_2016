@@ -38,15 +38,9 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2217">
-              <caret line="261" column="23" selection-start-line="261" selection-start-column="23" selection-end-line="261" selection-end-column="23" />
-              <folding>
-                <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-              </folding>
+            <state relative-caret-position="4413">
+              <caret line="298" column="14" selection-start-line="298" selection-start-column="14" selection-end-line="298" selection-end-column="14" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -80,8 +74,8 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/skeleton.html" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/app.js" />
       </list>
     </option>
   </component>
@@ -269,12 +263,12 @@
       <workItem from="1476195934752" duration="7277000" />
       <workItem from="1476256806960" duration="5822000" />
       <workItem from="1476274402176" duration="5868000" />
-      <workItem from="1476281348234" duration="2073000" />
+      <workItem from="1476281348234" duration="2209000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="62685000" />
+    <option name="totallyTimeSpent" value="62821000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1366" height="728" extended-state="0" />
@@ -326,13 +320,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -377,13 +365,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="211" column="44" selection-start-line="211" selection-start-column="44" selection-end-line="211" selection-end-column="44" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -403,13 +385,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -439,13 +415,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -480,13 +450,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -516,13 +480,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -552,13 +510,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3400">
           <caret line="200" column="36" selection-start-line="200" selection-start-column="36" selection-end-line="200" selection-end-column="36" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -588,13 +540,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -624,13 +570,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -660,13 +600,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -696,13 +630,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -732,13 +660,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -768,13 +690,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -804,13 +720,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -828,13 +738,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -877,15 +781,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2217">
-          <caret line="261" column="23" selection-start-line="261" selection-start-column="23" selection-end-line="261" selection-end-column="23" />
-          <folding>
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="4413">
+          <caret line="298" column="14" selection-start-line="298" selection-start-column="14" selection-end-line="298" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
