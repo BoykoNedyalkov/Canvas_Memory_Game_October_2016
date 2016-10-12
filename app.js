@@ -130,7 +130,6 @@ function main() {
 
      function timeLine() {//In progress
 
-         //let ctx = document.getElementById("canvas").getContext("2d");
          ctx.beginPath();
          ctx.strokeStyle = 'grey';
          ctx.lineCap="round";
@@ -243,7 +242,7 @@ function main() {
             }
         }
 
-        // Load winning image
+        // Load winning images
         let winArrImages = [ `Win`, `Win_RoYal` ];
         let winImg = new Image();
         arr[5] = [];
@@ -251,10 +250,16 @@ function main() {
             winImg.src = `./images/win/${winArrImages[i]}.png`;
             arr[5].push(winImg)
         }
+
+        // Load ending image
+        let gameOverImage = new Image();
+        gameOverImage.src = './images/gameOver.jpg';
+        arr.push(gameOverImage)
     }
     function drawCards() {
 
-        let cardImgArr = arr.slice(0,5); // Gets only images for the cards
+        // Gets only images for the cards
+        let cardImgArr = arr.slice(0,5);
         // Draws images back for setting the game without winning image
         cardImgArr.forEach( row => row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY)));
 
@@ -264,7 +269,7 @@ function main() {
     }
 
     function gameWon() {
-        //timeLine()
+
         gameIsWon = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -280,7 +285,6 @@ function main() {
         }
 
         restartButton(80);
-        // TODO: Make it if the player wants to reset the game
     }
 
     function restartButton(x) {
@@ -315,7 +319,6 @@ function main() {
 
     function gameOver() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        let gameoverImage = new Image();
 
         backgroundAudio.pause();
         setTimeout(playLostAudio, 500);
@@ -324,15 +327,15 @@ function main() {
             backgroundAudio.currentTime = 0;
         }
 
-        gameoverImage.src = './images/gameOver.jpg';
-        ctx.drawImage(gameoverImage, 0,0);
+        let gameOverImage = arr.pop();
+        ctx.drawImage(gameOverImage, 0,0);
 
         let pos = -100;
         let timer = setInterval(animateWords, 10);
         function animateWords() {
             pos += 0.3;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            ctx.drawImage(gameoverImage, 0,0);
+            ctx.drawImage(gameOverImage, 0,0);
             restartButton();
             ctx.font = '40pt sans';
             ctx.fillStyle = 'white';
