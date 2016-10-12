@@ -19,9 +19,11 @@ function main() {
 
         let obj = arr[col][row];
         if (obj.isFlipped == false) {
+
             obj.isFlipped = true;
             flippedCards.push(obj);
             ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
+
             if (flippedCards.length == 2) {
                 let firstImage = flippedCards[0];
                 let secondImage = flippedCards[1];
@@ -30,6 +32,8 @@ function main() {
                     foundCards += 2;
 
                     if (foundCards == 20){
+                        
+                        foundCards = 0;
                         setTimeout( () => gameWon(), 500);
                     }
                 }
@@ -206,7 +210,7 @@ function main() {
                 // Gets the image id from directory via relative path
                 front.src = `./images/90x90/${frontImgName}_90x90.jpg`;
                 back.src = `./images/90x90/SoftUni_90x90.jpg`;
-                // TODO: Check out the properties for the img class for attach styling to them
+                // TODO: Check out the properties for the img class if it could be attached styling to them
                 imgArr.splice(rngIndex, 1); // Shrinks the array to get correct img
 
                 arr[col][row] = {
@@ -223,7 +227,7 @@ function main() {
 
     function drawCards() {
         loadImages();
-        // Draws images
+        // Draws images back for setting the game
         arr.forEach(row => row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY)));
     }
 
