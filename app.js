@@ -10,6 +10,7 @@ function main() {
     let backgroundAudio = document.getElementById("backgroundMusic");
     let audioWin = document.getElementById("gameWon");
     let audioLost = document.getElementById("gameLost");
+    let hasRestartButton = false;
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
 // }
@@ -47,11 +48,12 @@ function main() {
 
         flipCards( col, row );
         }
-        if(!click){
+        if(!click && hasRestartButton == true){
             let x = getCursorPosition(e)[0];
             let y = getCursorPosition(e)[1];
             if(x >= canvas.width / 2 - 100 && x <= canvas.width / 2 + 100
                 && y >= 60 && y <= 100){
+
                 location.reload();
             }
         }
@@ -79,7 +81,9 @@ function main() {
                     }
                 }
                 else {
+                    click = false;
                     setTimeout( () => flipBack( firstImage, secondImage ), 500);
+
                 }
                 flippedCards = [];
             }
@@ -92,6 +96,7 @@ function main() {
             ctx.drawImage(secondImage.img[1], secondImage.startPointX, secondImage.startPointY);
             firstImage.isFlipped = false;
             secondImage.isFlipped = false;
+        click = true;
     }
 
 // function res() { // TODO: for what is this func
@@ -132,7 +137,7 @@ function main() {
 
          //let ctx = document.getElementById("canvas").getContext("2d");
          ctx.beginPath();
-         ctx.strokeStyle = 'grey';
+         ctx.strokeStyle = 'black';
          ctx.lineCap="round";
          ctx.moveTo(30,450);
          ctx.lineTo(480,450);
@@ -144,7 +149,7 @@ function main() {
          let progress = 0;
 
          function line() {
-             let pr = progress * 0.005;
+             let pr = progress * 5;
 
              if(pr >= 360){
                  ctx.fillStyle = 'red';
@@ -153,7 +158,7 @@ function main() {
 
              }
              ctx.beginPath();
-             ctx.strokeStyle = 'skyblue';
+             ctx.strokeStyle = 'red';
              ctx.lineCap="round";
              ctx.moveTo(30 + pr,450);
              ctx.lineTo(30 + pr + 15,450);
@@ -165,15 +170,16 @@ function main() {
 
                  clearInterval(timer);
                  click = false;
-                 gameOver();
+                 //gameOver();
+                 gameWon()
              }
-             if (gameIsWon == true)
+             /*if (gameIsWon == true)
              {
                  clearInterval(timer);
                  click = false;
                  gameWon();
-             }
-             ctx.fillStyle = 'black';
+             }*/
+             ctx.fillStyle = 'white';
              ctx.font = '10pt italic';
              ctx.fillText('Your time', 30,450);
          }
@@ -265,6 +271,9 @@ function main() {
 
     function gameWon() {
         //timeLine()
+        click = false;
+        hasRestartButton = true;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
         gameIsWon = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -272,7 +281,7 @@ function main() {
         ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
 
         backgroundAudio.pause();
-        arr = [];
+       arr = [];
         setTimeout(playWinAudio, 500);
         function playWinAudio() {
             audioWin.play();
@@ -316,7 +325,8 @@ function main() {
     function gameOver() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let gameoverImage = new Image();
-
+        hasRestartButton= true;
+        click = false;
         backgroundAudio.pause();
         setTimeout(playLostAudio, 500);
         function playLostAudio() {
@@ -333,7 +343,7 @@ function main() {
             pos += 0.3;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(gameoverImage, 0,0);
-            restartButton();
+            restartButton(80);
             ctx.font = '40pt sans';
             ctx.fillStyle = 'white';
             ctx.fillText("Счупи се телевизора", pos, 200);
@@ -345,7 +355,8 @@ function main() {
         loadImages();
         setTimeout( drawCards, 183 );
         setTimeout( timeLine, 183 );
-
+        hasRestartButton = false;
+        click = true;
         setTimeout(playBackground, 500);
         function playBackground() {
             setTimeout(backgroundAudio.play(), 500);
