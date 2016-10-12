@@ -1,6 +1,6 @@
 function main() {
-    let cardBack = document.getElementById('back');
-    let winImage = document.getElementById('winImage')
+    // let cardBack = document.getElementById('back');
+    // let winImage = document.getElementById('winImage')
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
     let imageSize = 100;
@@ -214,11 +214,11 @@ function main() {
                 let rngIndex = Math.floor((Math.random() * imgArr.length - 1) + 1);
 
                 let front = new Image();
-                let back = cardBack;
+                let back = new Image();
                 let frontImgName = `${imgArr[rngIndex]}`;
                 // Gets the image id from directory via relative path
                 front.src = `./images/90x90/${frontImgName}_90x90.jpg`;
-               // back.src = `./images/90x90/SoftUni_90x90.jpg`;
+                back.src = `./images/90x90/SoftUni_90x90.jpg`;
                 // TODO: Check out the properties for the img class if it could be attached styling to them
                 imgArr.splice(rngIndex, 1); // Shrinks the array to get correct img
 
@@ -240,8 +240,9 @@ function main() {
         arr.push({ win: winImg });
     }
     function drawCards() {
-
         loadImages();
+
+        let cardImgArr = arr.slice(0,5); // Gets only images for the cards
         // Draws images back for setting the game without winning image
         arr.forEach(row => arr.indexOf(row) < 5 ?
                     row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY))
@@ -300,12 +301,14 @@ function main() {
     }
     function setGame() {
         // TODO: Make it so that the first start does not have to be refreshed
-        window.drawImages = drawCards();
-        window.loadingBar = timeLine();
+        loadImages();
+        setTimeout( drawCards, 1000 );
+        setTimeout( timeLine, 1000 );
+
     }
     setGame();
     //grid();
 
 }
 
-setTimeout( main , 100 );
+main();
