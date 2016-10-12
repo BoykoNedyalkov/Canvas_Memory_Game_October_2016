@@ -81,7 +81,7 @@ function main() {
                     }
                 }
                 else {
-                    click = true;
+                    click = false;
                     setTimeout( () => flipBack( firstImage, secondImage), 500);
 
                 }
@@ -150,7 +150,7 @@ click = true;
          let progress = 0;
 
          function line() {
-             let pr = progress * 0.0005;
+             let pr = progress * 0.25;
 
              if(pr >= 360){
                  ctx.fillStyle = 'red';
