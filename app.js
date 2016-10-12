@@ -5,7 +5,7 @@ function main() {
     let foundCards = 0;
     let flippedCards = [];
     let arr = [];
-    let click = true;
+    let click = false;
     let gameIsWon = false;
     let backgroundAudio = document.getElementById("backgroundMusic");
     let audioWin = document.getElementById("gameWon");
@@ -37,18 +37,7 @@ function main() {
     }
 
     function onCanvasClick(e) {
-        if(click){
-        let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
-        let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
-
-        // To not throw exception in console if it is not within the array with images
-        if (!(row >= 0 && row < 4 && col >= 0 && col < 5)){
-            return
-        }
-
-        flipCards( col, row );
-        }
-        if(!click && hasRestartButton == true){
+     if(hasRestartButton == true){
             let x = getCursorPosition(e)[0];
             let y = getCursorPosition(e)[1];
             if(x >= canvas.width / 2 - 100 && x <= canvas.width / 2 + 100
@@ -57,10 +46,21 @@ function main() {
                 location.reload();
             }
         }
+         else if(click == true){
+            let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
+            let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
+
+        // To not throw exception in console if it is not within the array with images
+            if (!(row >= 0 && row < 4 && col >= 0 && col < 5)){
+                return
+            }
+
+            flipCards( col, row );
+        }
+
     }
 
     function flipCards( col, row ) {
-
         let obj = arr[col][row];
         if (obj.isFlipped == false) {
 
@@ -82,10 +82,11 @@ function main() {
                 }
                 else {
                     click = false;
-                    setTimeout( () => flipBack( firstImage, secondImage ), 500);
+                    setTimeout( () => flipBack( firstImage, secondImage), 500);
 
                 }
                 flippedCards = [];
+
             }
         }
     }
@@ -96,7 +97,7 @@ function main() {
             ctx.drawImage(secondImage.img[1], secondImage.startPointX, secondImage.startPointY);
             firstImage.isFlipped = false;
             secondImage.isFlipped = false;
-        click = true;
+click = true;
     }
 
 // function res() { // TODO: for what is this func
@@ -149,7 +150,7 @@ function main() {
          let progress = 0;
 
          function line() {
-             let pr = progress * 5;
+             let pr = progress * 1;
 
              if(pr >= 360){
                  ctx.fillStyle = 'red';
@@ -166,6 +167,9 @@ function main() {
              ctx.stroke();
 
              progress++;
+             if(pr >=410){
+                 click = false
+             }
              if(pr >= 435){
 
                  clearInterval(timer);
@@ -268,7 +272,6 @@ function main() {
         console.log(cardImgArr); // For debugging purposes. Must be removed at some point
         console.log(arr); // For debugging purposes. Must be removed at some point
     }
-
     function gameWon() {
         //timeLine()
         click = false;
@@ -276,18 +279,15 @@ function main() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         gameIsWon = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
         let rngWinIndex = Math.floor(Math.random() * 2);
         ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
-
         backgroundAudio.pause();
-       arr = [];
+       //arr = [];
         setTimeout(playWinAudio, 500);
         function playWinAudio() {
             audioWin.play();
             backgroundAudio.currentTime = 0;
         }
-
         restartButton(80);
         // TODO: Make it if the player wants to reset the game
     }
@@ -317,11 +317,9 @@ function main() {
     }
 
     function restart() {
-
         window.addEventListener("click", onCanvasClick);
         click = true;
     }
-
     function gameOver() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let gameoverImage = new Image();
@@ -349,9 +347,7 @@ function main() {
             ctx.fillText("Счупи се телевизора", pos, 200);
         }
     }
-
     function setGame() {
-
         loadImages();
         setTimeout( drawCards, 183 );
         setTimeout( timeLine, 183 );
