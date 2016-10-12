@@ -6,6 +6,7 @@ function main() {
     let flippedCards = [];
     let arr = [];
     let click = true;
+    let gameIsWon = false;
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
 // }
@@ -124,42 +125,56 @@ function main() {
 //         let sim = setInterval(progressSim, 50);
 //     }
 
-    function timeLine() {//In progress
-        ctx.beginPath();
-        ctx.strokeStyle = 'grey';
-        ctx.lineCap="round";
-        ctx.moveTo(30,450);
-        ctx.lineTo(460,450);
-        ctx.lineWidth = 25;
-        ctx.stroke();
-        let timer = setInterval(line, 20);
-        let progress = 0;
+     function timeLine() {//In progress
 
-        function line() {
-            let pr = progress;
-            if(pr >= 360){
-                ctx.fillStyle = 'red';
-                ctx.font = '15pt italic';
-                ctx.fillText('You are running out of time!', 150,200);
-            }
-            ctx.beginPath();
-            ctx.strokeStyle = 'skyblue';
-            ctx.lineCap="round";
-            ctx.moveTo(30 + pr,450);
-            ctx.lineTo(30 + pr + 15,450);
-            ctx.lineWidth = 20;
-            ctx.stroke();
-            //progress; // TODO: Change
-            if(pr >= 415){
-                clearInterval(timer);
-                click = false;
-                gameOver();
-            }
-            ctx.fillStyle = 'black';
-            ctx.font = '10pt italic';
-            ctx.fillText('Your time', 30,450);
-        }
-    }
+         //let ctx = document.getElementById("canvas").getContext("2d");
+         ctx.beginPath();
+         ctx.strokeStyle = 'grey';
+         ctx.lineCap="round";
+         ctx.moveTo(30,450);
+         ctx.lineTo(480,450);
+         ctx.lineWidth = 25;
+         ctx.stroke();
+
+
+         let timer = setInterval(line, 20);
+         let progress = 0;
+
+         function line() {
+             let pr = progress * 0.005;
+
+             if(pr >= 360){
+                 ctx.fillStyle = 'red';
+                 ctx.font = '15pt italic';
+                 ctx.fillText('You are running out of time!', 150,200);
+
+             }
+             ctx.beginPath();
+             ctx.strokeStyle = 'skyblue';
+             ctx.lineCap="round";
+             ctx.moveTo(30 + pr,450);
+             ctx.lineTo(30 + pr + 15,450);
+             ctx.lineWidth = 20;
+             ctx.stroke();
+
+             progress++;
+             if(pr >= 435){
+
+                 clearInterval(timer);
+                 click = false;
+                 gameOver();
+             }
+             if (gameIsWon == true)
+             {
+                 clearInterval(timer);
+                 click = false;
+                 gameWon();
+             }
+             ctx.fillStyle = 'black';
+             ctx.font = '10pt italic';
+             ctx.fillText('Your time', 30,450);
+         }
+     }
 
     function grid() {
         ctx.save();
@@ -218,6 +233,7 @@ function main() {
                         startPointY : startY,
                         borderStartX: startX-5,
                         borderStartY: startY-5
+
                 };
             }
         }
@@ -231,7 +247,6 @@ function main() {
             arr[5].push(winImg)
         }
     }
-
     function drawCards() {
 
         let cardImgArr = arr.slice(0,5); // Gets only images for the cards
@@ -244,28 +259,45 @@ function main() {
     }
 
     function gameWon() {
+        //timeLine()
+        gameIsWon = true;
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         let rngWinIndex = Math.floor(Math.random() * 2);
-        console.log(rngWinIndex);
         ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
         arr = [];
+        let audioWin = document.getElementById("gameWon");
+        setTimeout(playWinAudio, 500);
+        function playWinAudio() {
+            audioWin.play();
+        }
+
+        restartButton(80);
         // TODO: Make it if the player wants to reset the game
-        setTimeout( () => setGame(), 4000 );
     }
 
     function restartButton(x) {
-        ctx.strokeStyle = 'grey';
-        ctx.lineCap = 'square';
-        ctx.lineWidth = 40;
+        ctx.strokeStyle = 'white';
+        ctx.lineCap = 'round';
+        ctx.lineWidth = 50;
         ctx.beginPath();
         ctx.moveTo(canvas.width / 2 - x,80);
         ctx.lineTo(canvas.width / 2 + x,80);
         ctx.stroke();
-        ctx.fillStyle = 'purple';
+        ctx.strokeStyle = 'red';
+        ctx.lineCap = 'round';
+
+        ctx.lineWidth = 40;
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 2 - 80,80);
+        ctx.lineTo(canvas.width / 2 + 80,80);
+        ctx.stroke();
+        ctx.fillStyle = 'white';
         ctx.font = "23px italic";
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText("Restart Game", canvas.width / 2,80);
+        gameIsWon = false;
     }
 
     function restart() {
@@ -278,7 +310,14 @@ function main() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let gameoverImage = new Image();
 
-        gameoverImage.src = './images/game_over/game_over.png';
+
+        let audioLost = document.getElementById("gameLost");
+        setTimeout(playLostAudio, 500);
+        function playLostAudio() {
+            audioLost.play();
+        }
+
+        gameoverImage.src = './images/gameOver.jpg';
         ctx.drawImage(gameoverImage, 0,0);
 
         let pos = -100;
@@ -287,9 +326,9 @@ function main() {
             pos += 0.3;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(gameoverImage, 0,0);
-            restartButton(80);
+            restartButton();
             ctx.font = '40pt sans';
-            ctx.fillStyle = 'red';
+            ctx.fillStyle = 'white';
             ctx.fillText("Счупи се телевизора", pos, 200);
         }
     }
