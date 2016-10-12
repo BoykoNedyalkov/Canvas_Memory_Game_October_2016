@@ -1,6 +1,4 @@
 function main() {
-    // let cardBack = document.getElementById('back');
-    // let winImage = document.getElementById('winImage')
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
     let imageSize = 100;
@@ -126,77 +124,67 @@ function main() {
 //         let sim = setInterval(progressSim, 50);
 //     }
 
-     function timeLine() {//In progress
+    function timeLine() {//In progress
+        ctx.beginPath();
+        ctx.strokeStyle = 'grey';
+        ctx.lineCap="round";
+        ctx.moveTo(30,450);
+        ctx.lineTo(460,450);
+        ctx.lineWidth = 25;
+        ctx.stroke();
+        let timer = setInterval(line, 20);
+        let progress = 0;
 
-         //let ctx = document.getElementById("canvas").getContext("2d");
-         ctx.beginPath();
-         ctx.strokeStyle = 'grey';
-         ctx.lineCap="round";
-         ctx.moveTo(30,450);
-         ctx.lineTo(460,450);
-         ctx.lineWidth = 25;
-         ctx.stroke();
+        function line() {
+            let pr = progress;
+            if(pr >= 360){
+                ctx.fillStyle = 'red';
+                ctx.font = '15pt italic';
+                ctx.fillText('You are running out of time!', 150,200);
+            }
+            ctx.beginPath();
+            ctx.strokeStyle = 'skyblue';
+            ctx.lineCap="round";
+            ctx.moveTo(30 + pr,450);
+            ctx.lineTo(30 + pr + 15,450);
+            ctx.lineWidth = 20;
+            ctx.stroke();
+            //progress; // TODO: Change
+            if(pr >= 415){
+                clearInterval(timer);
+                click = false;
+                gameOver();
+            }
+            ctx.fillStyle = 'black';
+            ctx.font = '10pt italic';
+            ctx.fillText('Your time', 30,450);
+        }
+    }
 
-
-         let timer = setInterval(line, 20);
-         let progress = 0;
-
-         function line() {
-             let pr = progress * 0.05;
-
-             if(pr >= 360){
-                 ctx.fillStyle = 'red';
-                 ctx.font = '15pt italic';
-                 ctx.fillText('You are running out of time!', 150,200);
-
-             }
-             ctx.beginPath();
-             ctx.strokeStyle = 'skyblue';
-             ctx.lineCap="round";
-             ctx.moveTo(30 + pr,450);
-             ctx.lineTo(30 + pr + 15,450);
-             ctx.lineWidth = 20;
-             ctx.stroke();
-
-             progress++;
-             if(pr >= 415){
-                 clearInterval(timer);
-                 click = false;
-                 gameOver();
-             }
-             ctx.fillStyle = 'black';
-             ctx.font = '10pt italic';
-             ctx.fillText('Your time', 30,450);
-         }
-     }
-
- function grid() {
-
-     ctx.save();
-
-     ctx.strokeStyle = 'grey';
-     ctx.lineWidth = 0.25;
-     for (let row = 0; row < 60; row++) {
-         if (row % 5 == 0) ctx.lineWidth = 0.5;
-         if (row % 10 == 0) ctx.lineWidth = 1;
-         ctx.beginPath();
-         ctx.moveTo(0, row * 10);
-         ctx.lineTo(800, row * 10);
-         ctx.stroke();
-         if (row % 5 == 0) ctx.lineWidth = 0.25;
-     }
-     for (let col = 0; col < 80; col++) {
-         if (col % 5 == 0) ctx.lineWidth = 0.5;
-         if (col % 10 == 0) ctx.lineWidth = 1;
-         ctx.beginPath();
-         ctx.moveTo(col * 10, 0);
-         ctx.lineTo(col * 10, 600);
-         ctx.stroke();
-         if (col % 5 == 0) ctx.lineWidth = 0.25;
-     }
-
-     ctx.restore();
- }
+    function grid() {
+        ctx.save();
+        ctx.strokeStyle = 'grey';
+        ctx.lineWidth = 0.25;
+        for (let row = 0; row < 60; row++) {
+            if (row % 5 == 0) ctx.lineWidth = 0.5;
+            if (row % 10 == 0) ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(0, row * 10);
+            ctx.lineTo(800, row * 10);
+            ctx.stroke();
+            if (row % 5 == 0) ctx.lineWidth = 0.25;
+        }
+        for (let col = 0; col < 80; col++) {
+            if (col % 5 == 0) ctx.lineWidth = 0.5;
+            if (col % 10 == 0) ctx.lineWidth = 1;
+            ctx.beginPath();
+            ctx.moveTo(col * 10, 0);
+            ctx.lineTo(col * 10, 600);
+            ctx.stroke();
+            if (col % 5 == 0) ctx.lineWidth = 0.25;
+        }
+        ctx.restore();
+    }
 
     function loadImages() {
         let imgArr = ['nakov', 'rakia', 'royal', 'salata', 'pornhub', 'beer', 'simeon',
@@ -233,14 +221,18 @@ function main() {
                 };
             }
         }
+
         // Load winning image
+        let winArrImages = [ `Win`, `Win_RoYal` ];
         let winImg = new Image();
-        winImg.src = `./images/Win.png`;
-        arr.push({ win: winImg });
+        arr[5] = [];
+        for (var i = 0; i < winArrImages.length; i++) {
+            winImg.src = `./images/win/${winArrImages[i]}.png`;
+            arr[5].push(winImg)
+        }
     }
 
     function drawCards() {
-
 
         let cardImgArr = arr.slice(0,5); // Gets only images for the cards
         // Draws images back for setting the game without winning image
@@ -252,11 +244,15 @@ function main() {
     }
 
     function gameWon() {
-        ctx.drawImage( arr[5].win, 10, 10, 500, 400 );
+
+        let rngWinIndex = Math.floor(Math.random() * 2);
+        console.log(rngWinIndex);
+        ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
         arr = [];
         // TODO: Make it if the player wants to reset the game
         setTimeout( () => setGame(), 4000 );
     }
+
     function restartButton(x) {
         ctx.strokeStyle = 'grey';
         ctx.lineCap = 'square';
@@ -271,10 +267,13 @@ function main() {
         ctx.textBaseline = 'middle';
         ctx.fillText("Restart Game", canvas.width / 2,80);
     }
+
     function restart() {
+
         window.addEventListener("click", onCanvasClick);
         click = true;
     }
+
     function gameOver() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let gameoverImage = new Image();
@@ -294,15 +293,15 @@ function main() {
             ctx.fillText("Счупи се телевизора", pos, 200);
         }
     }
-    function setGame() {
-        // TODO: Make it so that the first start does not have to be refreshed
-        loadImages();
-        setTimeout( drawCards, 1000 );
-        setTimeout( timeLine, 1000 );
 
+    function setGame() {
+
+        loadImages();
+        setTimeout( drawCards, 200 );
+        setTimeout( timeLine, 200 );
     }
+
     setGame();
-    //grid();
 }
 
-main()
+main();
