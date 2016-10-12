@@ -142,7 +142,7 @@ function main() {
          let progress = 0;
 
          function line() {
-             let pr = progress * 4;
+             let pr = progress * 0.05;
 
              if(pr >= 360){
                  ctx.fillStyle = 'red';
@@ -230,7 +230,6 @@ function main() {
                         startPointY : startY,
                         borderStartX: startX-5,
                         borderStartY: startY-5
-
                 };
             }
         }
@@ -250,18 +249,18 @@ function main() {
     }
 
     function gameWon() {
-        ctx.drawImage( winImage, 10, 10, 500, 400 );
+        ctx.drawImage( arr[5].win, 10, 10, 500, 400 );
         arr = [];
         // TODO: Make it if the player wants to reset the game
-        //setTimeout( () => setGame(), 4000 );
+        setTimeout( () => setGame(), 4000 );
     }
-    function restartButton() {
+    function restartButton(x) {
         ctx.strokeStyle = 'grey';
         ctx.lineCap = 'square';
         ctx.lineWidth = 40;
         ctx.beginPath();
-        ctx.moveTo(canvas.width / 2 - 80,80);
-        ctx.lineTo(canvas.width / 2 + 80,80);
+        ctx.moveTo(canvas.width / 2 - x,80);
+        ctx.lineTo(canvas.width / 2 + x,80);
         ctx.stroke();
         ctx.fillStyle = 'purple';
         ctx.font = "23px italic";
@@ -286,7 +285,7 @@ function main() {
             pos += 0.3;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(gameoverImage, 0,0);
-            restartButton();
+            restartButton(80);
             ctx.font = '40pt sans';
             ctx.fillStyle = 'red';
             ctx.fillText("Счупи се телевизора", pos, 200);
