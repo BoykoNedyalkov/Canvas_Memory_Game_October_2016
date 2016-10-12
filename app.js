@@ -5,7 +5,7 @@ function main() {
     let imageSize = 90;
     let foundCards = 0;
     let flippedCards = [];
-    let arr = []; // TODO: For what do we need object
+    let arr = [];
 
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
@@ -62,6 +62,7 @@ function main() {
             secondImage.isFlipped = false;
 
     }
+
     function getCursorPosition(e) {
         let x;
         let y;
@@ -201,9 +202,8 @@ function main() {
 //
 //     ctx.restore();
 // }
-    function drawCards() {
-        let iterator = 0; // TODO: What is the purpose for this
 
+    function loadImages() {
         let imgArr = ['nakov', 'rakia', 'royal', 'salata', 'pornhub', 'beer', 'simeon',
             'televizor', 'ViktorKazakov', 'ViktorKostadinov', 'nakov', 'rakia', 'royal', 'salata',
             'pornhub', 'beer', 'simeon', 'televizor', 'ViktorKazakov', 'ViktorKostadinov'];
@@ -219,7 +219,7 @@ function main() {
 
                 let front = new Image();
                 let back = new Image();
-                let string = `${imgArr[rngIndex]}`;
+                let pictureName = `${imgArr[rngIndex]}`;
                 // Gets the image id from directory via relative path
                 front.src = `./images/90x90/${imgArr[rngIndex]}_90x90.jpg`;
                 back.src = `./images/90x90/SoftUni_90x90.jpg`;
@@ -227,36 +227,40 @@ function main() {
                 imgArr.splice(rngIndex, 1); // Shrinks the array to get correct img
 
                 arr[col][row] = {
-                        name: string,
+                        name: pictureName,
                         img:[front, back],
-                        id: iterator, // TODO: What is the purpose for this
                         isFlipped: false,
                         startPointX : startX,
                         startPointY : startY
                 };
-
-            }
-        }
-
-        for (let col = 0; col < 5; col++) {
-            for (let row = 0; row < 4; row++) {
-                ctx.drawImage(arr[col][row].img[1], arr[col][row].startPointX, arr[col][row].startPointY); // Draws
-                                                                                                           // image
             }
         }
          console.log(arr); // For debugging purposes. Must be removed at some point
     }
 
+    function drawCards() {
+        loadImages();
+        // Draws images
+        arr.forEach(row => row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY)));
+    }
+
     function gameWon() {
         let winImg = new Image();
         winImg.src = `./images/Win.png`;
-        ctx.drawImage(winImg, 20,20, 450, 360 );
-        setTimeout(function () {drawCards();
-        }, 4000);
+        ctx.drawImage( winImg, 20,20, 450, 360 );
+        setTimeout( () => refreshGame(), 4000 );
+    }
+
+    function refreshGame() {
+        // TODO: Can we make it to have no repetition with window
+        window.drawImages = drawCards();
+        window.loadingBar = timeLine();
+
     }
 
     window.drawImages = drawCards();
     window.loadingBar = timeLine();
 
 }
-setTimeout(main, 100);
+
+setTimeout( main , 100 );
