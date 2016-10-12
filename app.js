@@ -346,7 +346,6 @@ function main() {
         setTimeout( drawCards, 183 );
         setTimeout( timeLine, 183 );
 
-
         setTimeout(playBackground, 500);
         function playBackground() {
             setTimeout(backgroundAudio.play(), 500);

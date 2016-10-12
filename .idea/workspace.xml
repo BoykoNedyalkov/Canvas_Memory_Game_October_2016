@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="ae3c5046-73d0-445b-ac86-2089d387644f" name="Default" comment="" />
+    <list default="true" id="ae3c5046-73d0-445b-ac86-2089d387644f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
+    </list>
     <ignored path="SoftUni-Canvas-Game-Project.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -11,7 +14,6 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -24,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+            <state relative-caret-position="250">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -41,34 +43,9 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="133" column="25" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
-              <folding>
-                <element signature="e#434#484#0" expanded="false" />
-                <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="e#3010#3060#0" expanded="false" />
-                <element signature="e#3189#3215#0" expanded="false" />
-                <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="skeleton.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/skeleton.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-              <folding>
-                <element signature="n#style#0;n#canvas#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="25">
+              <caret line="315" column="25" selection-start-line="315" selection-start-column="25" selection-end-line="315" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -102,10 +79,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="x" value="-11" />
+    <option name="y" value="-11" />
+    <option name="width" value="1942" />
+    <option name="height" value="1042" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -132,38 +109,22 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Canvas_Memory_Game_October_2016" />
+              <option name="myItemId" value="JS-project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Canvas_Memory_Game_October_2016" />
+              <option name="myItemId" value="JS-project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Canvas_Memory_Game_October_2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Canvas_Memory_Game_October_2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Canvas_Memory_Game_October_2016" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="images" />
+              <option name="myItemId" value="JS-project" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -183,6 +144,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -203,6 +165,119 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Silvave91\Downloads\SoftUni\MyProjects\JS-project\images\win" />
     </key>
+  </component>
+  <component name="RestoreUpdateTree" date="Moments ago" ActionInfo="_Update">
+    <UpdatedFiles>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Updated from server" />
+        <option name="myStatusName" value="Changed on server" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="CHANGED_ON_SERVER" />
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Updated" />
+          <option name="myStatusName" value="Changed" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="UPDATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/.idea/workspace.xml</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/app.js</PATH>
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/index.html</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Created" />
+          <option name="myStatusName" value="Created" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="CREATED" />
+          <PATH vcs="Git" revision="">$PROJECT_DIR$/audio/background.mp3</PATH>
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Deleted" />
+          <option name="myStatusName" value="Deleted" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="true" />
+          <option name="myId" value="REMOVED_FROM_REPOSITORY" />
+        </FILE-GROUP>
+        <FILE-GROUP>
+          <option name="myUpdateName" value="Restored" />
+          <option name="myStatusName" value="Will be restored" />
+          <option name="mySupportsDeletion" value="false" />
+          <option name="myCanBeAbsent" value="false" />
+          <option name="myId" value="RESTORED" />
+        </FILE-GROUP>
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Modified" />
+        <option name="myStatusName" value="Modified" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MODIFIED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Skipped" />
+        <option name="myStatusName" value="Skipped" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SKIPPED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with conflicts" />
+        <option name="myStatusName" value="Will be merged with conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_CONFLICTS" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with tree conflicts" />
+        <option name="myStatusName" value="Merged with tree conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_TREE_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged with property conflicts" />
+        <option name="myStatusName" value="Will be merged with property conflicts" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED_WITH_PROPERTY_CONFLICT" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Merged" />
+        <option name="myStatusName" value="Will be merged" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="MERGED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Not in repository" />
+        <option name="myStatusName" value="Not in repository" />
+        <option name="mySupportsDeletion" value="true" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="UNKNOWN" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally added" />
+        <option name="myStatusName" value="Locally added" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_ADDED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Locally removed" />
+        <option name="myStatusName" value="Locally removed" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="LOCALLY_REMOVED" />
+      </FILE-GROUP>
+      <FILE-GROUP>
+        <option name="myUpdateName" value="Switched" />
+        <option name="myStatusName" value="Switched" />
+        <option name="mySupportsDeletion" value="false" />
+        <option name="myCanBeAbsent" value="false" />
+        <option name="myId" value="SWITCHED" />
+      </FILE-GROUP>
+    </UpdatedFiles>
   </component>
   <component name="RunManager" selected="JavaScript Debug.index.html">
     <configuration default="false" name="index.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/JS-project/index.html">
@@ -309,28 +384,28 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="67696000" />
+    <option name="totallyTimeSpent" value="67777000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23511904" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23501326" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936978" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39952436" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39952436" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -357,27 +432,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/images/90x90/rakia_90x90.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
@@ -393,14 +447,7 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -413,20 +460,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
           <caret line="211" column="44" selection-start-line="211" selection-start-column="44" selection-end-line="211" selection-end-column="44" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -442,31 +476,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="225">
@@ -479,31 +493,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
@@ -521,31 +515,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -558,31 +532,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
@@ -595,31 +549,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3400">
           <caret line="200" column="36" selection-start-line="200" selection-start-column="36" selection-end-line="200" selection-end-column="36" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="175">
@@ -632,31 +566,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -669,31 +583,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -706,31 +600,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
@@ -743,31 +617,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="350">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -780,31 +634,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="107" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="107" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -817,31 +651,11 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="23" column="0" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -854,49 +668,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -915,18 +696,11 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/skeleton.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="38" selection-start-line="14" selection-start-column="38" selection-end-line="14" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/skeleton.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
+        <state relative-caret-position="250">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -938,22 +712,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="133" column="25" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
-          <folding>
-            <element signature="e#434#484#0" expanded="false" />
-            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#3010#3060#0" expanded="false" />
-            <element signature="e#3189#3215#0" expanded="false" />
-            <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="25">
+          <caret line="315" column="25" selection-start-line="315" selection-start-column="25" selection-end-line="315" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
