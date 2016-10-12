@@ -32,7 +32,6 @@ function main() {
                     foundCards += 2;
 
                     if (foundCards == 20){
-                        
                         foundCards = 0;
                         setTimeout( () => gameWon(), 500);
                     }
@@ -222,19 +221,26 @@ function main() {
                 };
             }
         }
-         console.log(arr); // For debugging purposes. Must be removed at some point
     }
 
     function drawCards() {
         loadImages();
         // Draws images back for setting the game
         arr.forEach(row => row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY)));
+
+        // TODO: ...
+        // winning img
+        let winImg = new Image();
+        winImg.src = `./images/Win.png`;
+        arr.push({ win: winImg });
+
+        console.log(arr); // For debugging purposes. Must be removed at some point
     }
 
     function gameWon() {
-        let winImg = new Image();
-        winImg.src = `./images/Win.png`;
-        ctx.drawImage( winImg, 20,20, 450, 360 );
+
+        ctx.drawImage( arr[5].win, 20, 20, 450, 360 );
+        arr = [];
         // TODO: Make it if the player wants to reset the game
         setTimeout( () => setGame(), 4000 );
     }
