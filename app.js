@@ -3,7 +3,7 @@ function main() {
     let winImage = document.getElementById('winImage')
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
-    let imageSize = 90;
+    let imageSize = 100;
     let foundCards = 0;
     let flippedCards = [];
     let arr = [];
@@ -125,8 +125,8 @@ function main() {
          ctx.beginPath();
          ctx.strokeStyle = 'grey';
          ctx.lineCap="round";
-         ctx.moveTo(30,400);
-         ctx.lineTo(460,400);
+         ctx.moveTo(30,450);
+         ctx.lineTo(460,450);
          ctx.lineWidth = 25;
          ctx.stroke();
 
@@ -136,7 +136,7 @@ function main() {
          let progress = 0;
 
          function line() {
-             let pr = progress * 0.2;
+             let pr = progress * 0.05;
 
              if(pr >= 360){
                  ctx.fillStyle = 'red';
@@ -147,8 +147,8 @@ function main() {
              ctx.beginPath();
              ctx.strokeStyle = 'skyblue';
              ctx.lineCap="round";
-             ctx.moveTo(30 + pr,400);
-             ctx.lineTo(30 + pr + 15,400);
+             ctx.moveTo(30 + pr,450);
+             ctx.lineTo(30 + pr + 15,450);
              ctx.lineWidth = 20;
              ctx.stroke();
 
@@ -160,7 +160,7 @@ function main() {
              }
              ctx.fillStyle = 'black';
              ctx.font = '10pt italic';
-             ctx.fillText('Your time', 30,400);
+             ctx.fillText('Your time', 30,450);
          }
      }
 
@@ -244,12 +244,10 @@ function main() {
     }
 
     function gameWon() {
-        let winAudio = new
-
-        ctx.drawImage( winImage, 20, 20, 450, 360 );
+        ctx.drawImage( winImage, 10, 10, 500, 400 );
         arr = [];
         // TODO: Make it if the player wants to reset the game
-        setTimeout( () => setGame(), 4000 );
+        //setTimeout( () => setGame(), 4000 );
     }
     function gameOver() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
