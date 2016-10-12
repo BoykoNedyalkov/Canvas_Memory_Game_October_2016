@@ -41,8 +41,8 @@ function main() {
      if(hasRestartButton == true){
             let x = getCursorPosition(e)[0];
             let y = getCursorPosition(e)[1];
-            if(x >= canvas.width / 2 - 100 && x <= canvas.width / 2 + 100
-                && y >= 60 && y <= 100){
+            if(x >= canvas.width / 2 - 95 && x <= canvas.width / 2 + 105
+                && y >= 400 && y <= 460){
 
                 location.reload();
             }
@@ -157,12 +157,13 @@ click = true;
          let progress = 0;
 
          function line() {
+
              let pr = progress * 0.25;
 
-             if(pr >= 360){
+             if(pr >= 350){
                  ctx.fillStyle = 'red';
                  ctx.font = '15pt italic';
-                 ctx.fillText('You are running out of time!', 150,200);
+                 ctx.fillText('You are running out of time!', 260,430);
 
              }
              ctx.beginPath();
@@ -173,6 +174,12 @@ click = true;
              ctx.lineTo(30 + pr + 15,450);
              ctx.lineWidth = 20;
              ctx.stroke();
+
+
+
+             ctx.fillStyle = 'white';
+             ctx.font = '10pt italic';
+             ctx.fillText('Your time', 30,450);
 
              progress++;
              if(pr >=415){
@@ -186,14 +193,9 @@ click = true;
 
              }
              if(gameIsWon == true){
-                 clearInterval(timer);
                  click = false;
                  gameWon();
              }
-
-             ctx.fillStyle = 'white';
-             ctx.font = '10pt italic';
-             ctx.fillText('Your time', 30,450);
          }
      }
 
@@ -305,22 +307,22 @@ click = true;
         ctx.lineCap = 'round';
         ctx.lineWidth = 50;
         ctx.beginPath();
-        ctx.moveTo(canvas.width / 2 - x,80);
-        ctx.lineTo(canvas.width / 2 + x,80);
+        ctx.moveTo(canvas.width / 2 - x,430);
+        ctx.lineTo(canvas.width / 2 + x,430);
         ctx.stroke();
         ctx.strokeStyle = 'red';
         ctx.lineCap = 'round';
 
         ctx.lineWidth = 40;
         ctx.beginPath();
-        ctx.moveTo(canvas.width / 2 - 80,80);
-        ctx.lineTo(canvas.width / 2 + 80,80);
+        ctx.moveTo(canvas.width / 2 - 80,430);
+        ctx.lineTo(canvas.width / 2 + 80,430);
         ctx.stroke();
         ctx.fillStyle = 'white';
         ctx.font = "23px italic";
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText("Restart Game", canvas.width / 2,80);
+        ctx.fillText("Restart Game", canvas.width / 2,430);
         gameIsWon = false;
     }
 
@@ -343,16 +345,16 @@ click = true;
         gameoverImage.src = './images/gameOver.jpg';
         ctx.drawImage(gameoverImage, 0,0);
 
-        let pos = -100;
+        let pos = +600;
         let timer = setInterval(animateWords, 10);
         function animateWords() {
-            pos += 0.3;
+            pos -= 1;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(gameoverImage, 0,0);
             restartButton(80);
             ctx.font = '40pt sans';
             ctx.fillStyle = 'white';
-            ctx.fillText("Счупи се телевизора", pos, 200);
+            ctx.fillText("Чупихме телевизора", pos, 200);
         }
     }
     function setGame() {
