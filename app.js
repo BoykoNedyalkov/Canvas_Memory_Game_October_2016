@@ -1,6 +1,6 @@
 function main() {
     let cardBack = document.getElementById('back');
-    let winImage = document.getElementById('winImage')
+    // let winImage = document.getElementById('winImage')
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
     let imageSize = 100;
@@ -244,7 +244,7 @@ function main() {
     }
 
     function gameWon() {
-        ctx.drawImage( winImage, 10, 10, 500, 400 );
+        ctx.drawImage( arr[5].win, 10, 10, 500, 400 );
         arr = [];
         // TODO: Make it if the player wants to reset the game
         //setTimeout( () => setGame(), 4000 );
@@ -275,6 +275,7 @@ function main() {
     }
 
     setGame()
+   
 
     //grid();
 }
