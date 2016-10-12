@@ -138,7 +138,7 @@ function main() {
                  ctx.fillStyle = 'red';
                  ctx.font = '15pt italic';
                  ctx.fillText('You are running out of time!', 150,200);
-               
+
              }
              ctx.beginPath();
              ctx.strokeStyle = 'skyblue';
@@ -151,6 +151,7 @@ function main() {
              progress++;
              if(pr >= 415){
                  clearInterval(timer);
+                 gameOver();
              }
              ctx.fillStyle = 'black';
              ctx.font = '10pt italic';
@@ -244,7 +245,25 @@ function main() {
         // TODO: Make it if the player wants to reset the game
         setTimeout( () => setGame(), 4000 );
     }
+    function gameOver() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        let gameoverImage = new Image();
 
+        gameoverImage.src = './images/game_over/game_over.png';
+        ctx.drawImage(gameoverImage, 0,0);
+
+        let pos = -100;
+        let timer = setInterval(animateWords, 10);
+        function animateWords() {
+            pos += 0.3;
+            ctx.font = '40pt sans';
+            ctx.fillStyle = 'red';
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            ctx.drawImage(gameoverImage, 0,0);
+            ctx.fillText("Счупи се телевизора", pos, 200);
+
+        }
+    }
     function setGame() {
         // TODO: Make it so that the first start does not have to be refreshed
         window.drawImages = drawCards();
