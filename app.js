@@ -7,6 +7,9 @@ function main() {
     let arr = [];
     let click = true;
     let gameIsWon = false;
+    let backgroundAudio = document.getElementById("backgroundMusic");
+    let audioWin = document.getElementById("gameWon");
+    let audioLost = document.getElementById("gameLost");
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
 // }
@@ -260,13 +263,14 @@ function main() {
         //timeLine()
         gameIsWon = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-
         ctx.drawImage( arr[5].win, 10, 10, 500, 400 );
+
+        backgroundAudio.pause();
         arr = [];
-        let audioWin = document.getElementById("gameWon");
         setTimeout(playWinAudio, 500);
         function playWinAudio() {
             audioWin.play();
+            backgroundAudio.currentTime = 0;
         }
 
         restartButton(80);
@@ -303,11 +307,11 @@ function main() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let gameoverImage = new Image();
 
-
-        let audioLost = document.getElementById("gameLost");
+        backgroundAudio.pause();
         setTimeout(playLostAudio, 500);
         function playLostAudio() {
             audioLost.play();
+            backgroundAudio.currentTime = 0;
         }
 
         gameoverImage.src = './images/gameOver.jpg';
@@ -330,6 +334,16 @@ function main() {
         loadImages();
         setTimeout( drawCards, 183 );
         setTimeout( timeLine, 183 );
+
+
+        setTimeout(playBackground, 500);
+        function playBackground() {
+            setTimeout(backgroundAudio.play(), 500);
+            audioLost.pause();
+            audioLost.currentTime = 0;
+            audioWin.pause();
+            audioWin.currentTime = 0;
+        }
 
     }
     setGame();
