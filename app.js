@@ -237,5 +237,5 @@ function main() {
     window.drawImages = drawCards();
     window.loadingBar = timeLine();
 
-};
+}
 setTimeout(main, 100);
