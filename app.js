@@ -159,6 +159,7 @@ function main() {
 
              progress++;
              if(pr >= 435){
+
                  clearInterval(timer);
                  click = false;
                  gameOver();
@@ -235,6 +236,7 @@ function main() {
                         startPointY : startY,
                         borderStartX: startX-5,
                         borderStartY: startY-5
+
                 };
             }
         }
@@ -243,17 +245,15 @@ function main() {
         winImg.src = `./images/Win.png`;
         arr.push({ win: winImg });
     }
-
     function drawCards() {
-
+        loadImages();
 
         let cardImgArr = arr.slice(0,5); // Gets only images for the cards
         // Draws images back for setting the game without winning image
-        cardImgArr.forEach( row => row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY)));
-
-        // TODO: Remove consoles at the end
-        console.log(cardImgArr); // For debugging purposes. Must be removed at some point
-        console.log(arr); // For debugging purposes. Must be removed at some point
+        arr.forEach(row => arr.indexOf(row) < 5 ?
+                    row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY))
+                    : false);
+       // console.log(arr); // For debugging purposes. Must be removed at some point
     }
 
     function gameWon() {
@@ -263,6 +263,7 @@ function main() {
 
         ctx.drawImage( arr[5].win, 10, 10, 500, 400 );
         arr = [];
+
         restartButton(80);
         // TODO: Make it if the player wants to reset the game
     }
@@ -276,10 +277,11 @@ function main() {
         ctx.stroke();
         ctx.strokeStyle = 'red';
         ctx.lineCap = 'round';
+
         ctx.lineWidth = 40;
         ctx.beginPath();
-        ctx.moveTo(canvas.width / 2 - x,80);
-        ctx.lineTo(canvas.width / 2 + x,80);
+        ctx.moveTo(canvas.width / 2 - 80,80);
+        ctx.lineTo(canvas.width / 2 + 80,80);
         ctx.stroke();
         ctx.fillStyle = 'white';
         ctx.font = "23px italic";
@@ -305,7 +307,7 @@ function main() {
             pos += 0.3;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(gameoverImage, 0,0);
-            restartButton(80);
+            restartButton();
             ctx.font = '40pt sans';
             ctx.fillStyle = 'white';
             ctx.fillText("Счупи се телевизора", pos, 200);
@@ -320,6 +322,7 @@ function main() {
     }
     setGame();
     //grid();
+
 }
 
-main()
+main();
