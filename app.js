@@ -5,7 +5,7 @@ function main() {
     let imageSize = 90;
     let foundCards = 0;
     let flippedCards = [];
-    let arr = [];
+    let arr = []; //Simulate view model
 
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
@@ -241,11 +241,12 @@ function main() {
     function drawCards() {
 
         loadImages();
+        let cardImgArr = arr.slice(0,5); // Gets only images for the cards
         // Draws images back for setting the game without winning image
-        arr.forEach(row => arr.indexOf(row) < 5 ?
-                    row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY))
-                    : false);
+        cardImgArr.forEach( row => row.forEach(obj => ctx.drawImage(obj.img[1], obj.startPointX, obj.startPointY)));
 
+        // TODO: Remove consoles at the end
+        console.log(cardImgArr); // For debugging purposes. Must be removed at some point
         console.log(arr); // For debugging purposes. Must be removed at some point
     }
 
