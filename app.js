@@ -16,36 +16,25 @@ function main() {
     function onCanvasClick(e) {
         let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
         let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
-        //if ((row >= 0 && row < 4) && (col >= 0 && col < 5))
-        //    alert(row + "," + col);
-        //return [row, col]; // TODO: return to where
+
         let obj = arr[col][row];
         if (obj.isFlipped == false) {
             obj.isFlipped = true;
             flippedCards.push(obj);
-            //alert(flippedCards.length);
             ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
-            //alert('length of array is ' + flippedCards.length);
-            if (flippedCards.length === 2) {
-
-                //alert('flipped cards = 2');
+            if (flippedCards.length == 2) {
                 let firstImage = flippedCards[0];
                 let secondImage = flippedCards[1];
 
-                if (firstImage.name === secondImage.name) {
-                    //alert(firstImage.name+' + '+secondImage.name);
+                if (firstImage.name == secondImage.name) {
                     foundCards += 2;
-                    if(foundCards == 20){
-                        setTimeout(function () {
-                            gameWon();
-                        }, 500);
-                        gameWon();
+
+                    if (foundCards == 20){
+                        setTimeout( () => gameWon(), 500);
                     }
-                    //alert('match');
                 }
                 else {
-                    //alert('tuk');
-                    setTimeout( () => flipBack(firstImage, secondImage), 1000);
+                    setTimeout( () => flipBack( firstImage, secondImage ), 1000);
                 }
                 flippedCards = [];
             }
@@ -53,11 +42,11 @@ function main() {
     }
 
     function flipBack(firstImage,secondImage) {
+
             ctx.drawImage(firstImage.img[1], firstImage.startPointX, firstImage.startPointY);
             ctx.drawImage(secondImage.img[1], secondImage.startPointX, secondImage.startPointY);
             firstImage.isFlipped = false;
             secondImage.isFlipped = false;
-
     }
 
     function getCursorPosition(e) {
@@ -215,7 +204,7 @@ function main() {
                 let back = new Image();
                 let frontImgName = `${imgArr[rngIndex]}`;
                 // Gets the image id from directory via relative path
-                front.src = `./images/90x90/${imgArr[rngIndex]}_90x90.jpg`;
+                front.src = `./images/90x90/${frontImgName}_90x90.jpg`;
                 back.src = `./images/90x90/SoftUni_90x90.jpg`;
                 // TODO: Check out the properties for the img class for attach styling to them
                 imgArr.splice(rngIndex, 1); // Shrinks the array to get correct img
@@ -250,7 +239,6 @@ function main() {
         // TODO: Make it so that the first start does not have to be refreshed
         window.drawImages = drawCards();
         window.loadingBar = timeLine();
-
     }
 
     setGame()
