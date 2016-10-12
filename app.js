@@ -1,6 +1,4 @@
 function main() {
-    // let cardBack = document.getElementById('back');
-    // let winImage = document.getElementById('winImage')
     let canvas = document.getElementById("canvas");
     let ctx = canvas.getContext("2d");
     let imageSize = 100;
@@ -8,6 +6,7 @@ function main() {
     let flippedCards = [];
     let arr = [];
     let click = true;
+    let gameIsWon = false;
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
 // }
@@ -133,7 +132,7 @@ function main() {
          ctx.strokeStyle = 'grey';
          ctx.lineCap="round";
          ctx.moveTo(30,450);
-         ctx.lineTo(460,450);
+         ctx.lineTo(480,450);
          ctx.lineWidth = 25;
          ctx.stroke();
 
@@ -142,7 +141,7 @@ function main() {
          let progress = 0;
 
          function line() {
-             let pr = progress * 0.05;
+             let pr = progress * 0.005;
 
              if(pr >= 360){
                  ctx.fillStyle = 'red';
@@ -159,10 +158,16 @@ function main() {
              ctx.stroke();
 
              progress++;
-             if(pr >= 415){
+             if(pr >= 435){
                  clearInterval(timer);
                  click = false;
                  gameOver();
+             }
+             if (gameIsWon == true)
+             {
+                 clearInterval(timer);
+                 click = false;
+                 gameWon();
              }
              ctx.fillStyle = 'black';
              ctx.font = '10pt italic';
@@ -252,24 +257,36 @@ function main() {
     }
 
     function gameWon() {
+        //timeLine()
+        gameIsWon = true;
+        ctx.clearRect(0, 0, canvas.width, canvas.height)
+
         ctx.drawImage( arr[5].win, 10, 10, 500, 400 );
         arr = [];
+        restartButton(80);
         // TODO: Make it if the player wants to reset the game
-        setTimeout( () => setGame(), 4000 );
     }
     function restartButton(x) {
-        ctx.strokeStyle = 'grey';
-        ctx.lineCap = 'square';
+        ctx.strokeStyle = 'white';
+        ctx.lineCap = 'round';
+        ctx.lineWidth = 50;
+        ctx.beginPath();
+        ctx.moveTo(canvas.width / 2 - x,80);
+        ctx.lineTo(canvas.width / 2 + x,80);
+        ctx.stroke();
+        ctx.strokeStyle = 'red';
+        ctx.lineCap = 'round';
         ctx.lineWidth = 40;
         ctx.beginPath();
         ctx.moveTo(canvas.width / 2 - x,80);
         ctx.lineTo(canvas.width / 2 + x,80);
         ctx.stroke();
-        ctx.fillStyle = 'purple';
+        ctx.fillStyle = 'white';
         ctx.font = "23px italic";
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
         ctx.fillText("Restart Game", canvas.width / 2,80);
+        gameIsWon = false;
     }
     function restart() {
         window.addEventListener("click", onCanvasClick);
@@ -279,7 +296,7 @@ function main() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let gameoverImage = new Image();
 
-        gameoverImage.src = './images/game_over/game_over.png';
+        gameoverImage.src = './images/gameOver.jpg';
         ctx.drawImage(gameoverImage, 0,0);
 
         let pos = -100;
@@ -290,15 +307,15 @@ function main() {
             ctx.drawImage(gameoverImage, 0,0);
             restartButton(80);
             ctx.font = '40pt sans';
-            ctx.fillStyle = 'red';
+            ctx.fillStyle = 'white';
             ctx.fillText("Счупи се телевизора", pos, 200);
         }
     }
     function setGame() {
         // TODO: Make it so that the first start does not have to be refreshed
         loadImages();
-        setTimeout( drawCards, 1000 );
-        setTimeout( timeLine, 1000 );
+        setTimeout( drawCards, 183 );
+        setTimeout( timeLine, 183 );
 
     }
     setGame();
