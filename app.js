@@ -81,7 +81,7 @@ function main() {
                     }
                 }
                 else {
-                    click = false;
+                    click = true;
                     setTimeout( () => flipBack( firstImage, secondImage), 500);
 
                 }
@@ -150,7 +150,7 @@ click = true;
          let progress = 0;
 
          function line() {
-             let pr = progress * 1;
+             let pr = progress * 0.0005;
 
              if(pr >= 360){
                  ctx.fillStyle = 'red';
@@ -159,6 +159,7 @@ click = true;
 
              }
              ctx.beginPath();
+
              ctx.strokeStyle = 'red';
              ctx.lineCap="round";
              ctx.moveTo(30 + pr,450);
@@ -167,22 +168,22 @@ click = true;
              ctx.stroke();
 
              progress++;
-             if(pr >=410){
+             if(pr >=415){
                  click = false
              }
              if(pr >= 435){
 
                  clearInterval(timer);
                  click = false;
-                 //gameOver();
-                 gameWon()
+                 gameOver();
+
              }
-             /*if (gameIsWon == true)
-             {
+             if(gameIsWon == true){
                  clearInterval(timer);
                  click = false;
                  gameWon();
-             }*/
+             }
+
              ctx.fillStyle = 'white';
              ctx.font = '10pt italic';
              ctx.fillText('Your time', 30,450);
@@ -273,12 +274,12 @@ click = true;
         console.log(arr); // For debugging purposes. Must be removed at some point
     }
     function gameWon() {
-        //timeLine()
+
         click = false;
         hasRestartButton = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         gameIsWon = true;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
         let rngWinIndex = Math.floor(Math.random() * 2);
         ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
         backgroundAudio.pause();
@@ -349,6 +350,7 @@ click = true;
     }
     function setGame() {
         loadImages();
+        gameIsWon = false;
         setTimeout( drawCards, 183 );
         setTimeout( timeLine, 183 );
         hasRestartButton = false;
