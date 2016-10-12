@@ -142,7 +142,7 @@ function main() {
          let progress = 0;
 
          function line() {
-             let pr = progress * 4;
+             let pr = progress;
 
              if(pr >= 360){
                  ctx.fillStyle = 'red';
@@ -158,7 +158,7 @@ function main() {
              ctx.lineWidth = 20;
              ctx.stroke();
 
-             progress++;
+             // progress++;
              if(pr >= 415){
                  clearInterval(timer);
                  click = false;
@@ -250,8 +250,14 @@ function main() {
     }
 
     function gameWon() {
-        ctx.drawImage( winImage, 10, 10, 500, 400 );
+        ctx.drawImage( arr[5].win, 10, 10, 500, 400 );
         arr = [];
+
+        let audio = document.getElementById("gameWon");
+        setTimeout(neshtoTamPlay, 1000);
+        function neshtoTamPlay() {
+            audio.play();
+        }
         // TODO: Make it if the player wants to reset the game
         //setTimeout( () => setGame(), 4000 );
     }
@@ -299,6 +305,7 @@ function main() {
     }
     setGame();
     //grid();
+
 }
 
 setTimeout( main , 100 );
