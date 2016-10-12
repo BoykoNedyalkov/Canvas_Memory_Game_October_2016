@@ -259,10 +259,15 @@ function main() {
     function gameWon() {
         //timeLine()
         gameIsWon = true;
-        ctx.clearRect(0, 0, canvas.width, canvas.height)
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         ctx.drawImage( arr[5].win, 10, 10, 500, 400 );
         arr = [];
+        let audioWin = document.getElementById("gameWon");
+        setTimeout(playWinAudio, 500);
+        function playWinAudio() {
+            audioWin.play();
+        }
 
         restartButton(80);
         // TODO: Make it if the player wants to reset the game
@@ -297,6 +302,13 @@ function main() {
     function gameOver() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let gameoverImage = new Image();
+
+
+        let audioLost = document.getElementById("gameLost");
+        setTimeout(playLostAudio, 500);
+        function playLostAudio() {
+            audioLost.play();
+        }
 
         gameoverImage.src = './images/gameOver.jpg';
         ctx.drawImage(gameoverImage, 0,0);
