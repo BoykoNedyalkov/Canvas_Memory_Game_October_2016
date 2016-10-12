@@ -24,8 +24,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+            <state relative-caret-position="272">
+              <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
               <folding />
             </state>
           </provider>
@@ -41,13 +41,21 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+            <state relative-caret-position="113">
+              <caret line="133" column="25" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
               <folding>
+                <element signature="e#434#484#0" expanded="false" />
+                <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+                <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
                 <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-                <element signature="e#2828#2878#0" expanded="false" />
-                <element signature="e#3007#3033#0" expanded="false" />
+                <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+                <element signature="e#3010#3060#0" expanded="false" />
+                <element signature="e#3189#3215#0" expanded="false" />
                 <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+                <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+                <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+                <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+                <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -296,12 +304,12 @@
       <workItem from="1476281348234" duration="734000" />
       <workItem from="1476284662132" duration="756000" />
       <workItem from="1476285791999" duration="3250000" />
-      <workItem from="1476289570681" duration="321000" />
+      <workItem from="1476289570681" duration="2344000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="65673000" />
+    <option name="totallyTimeSpent" value="67696000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
@@ -344,7 +352,7 @@
           <line>10</line>
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="16" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -354,10 +362,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -398,10 +414,18 @@
         <state relative-caret-position="300">
           <caret line="211" column="44" selection-start-line="211" selection-start-column="44" selection-end-line="211" selection-end-column="44" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -419,10 +443,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -448,10 +480,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -482,10 +522,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -511,10 +559,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -540,10 +596,18 @@
         <state relative-caret-position="3400">
           <caret line="200" column="36" selection-start-line="200" selection-start-column="36" selection-end-line="200" selection-end-column="36" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -569,10 +633,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -598,10 +670,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -627,10 +707,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -656,10 +744,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -685,10 +781,18 @@
         <state relative-caret-position="17">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -714,10 +818,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -743,10 +855,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -764,10 +884,18 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -797,8 +925,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="64" selection-start-line="10" selection-start-column="64" selection-end-line="10" selection-end-column="64" />
+        <state relative-caret-position="272">
+          <caret line="16" column="7" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -810,13 +938,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="149" column="0" selection-start-line="149" selection-start-column="0" selection-end-line="149" selection-end-column="0" />
+        <state relative-caret-position="113">
+          <caret line="133" column="25" selection-start-line="133" selection-start-column="25" selection-end-line="133" selection-end-column="25" />
           <folding>
+            <element signature="e#434#484#0" expanded="false" />
+            <element signature="n#!!block;n#getCursorPosition#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#onCanvasClick#0;n#!!block;n#main#0" expanded="false" />
             <element signature="n#!!block;n#flipCards#0;n#!!block;n#main#0" expanded="false" />
-            <element signature="e#2828#2878#0" expanded="false" />
-            <element signature="e#3007#3033#0" expanded="false" />
+            <element signature="n#!!block;n#flipBack#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="e#3010#3060#0" expanded="false" />
+            <element signature="e#3189#3215#0" expanded="false" />
             <element signature="n#!!block;n#grid#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#loadImages#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#drawCards#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restartButton#0;n#!!block;n#main#0" expanded="false" />
+            <element signature="n#!!block;n#restart#0;n#!!block;n#main#0" expanded="false" />
           </folding>
         </state>
       </provider>

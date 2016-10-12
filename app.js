@@ -7,6 +7,9 @@ function main() {
     let arr = [];
     let click = true;
     let gameIsWon = false;
+    let backgroundAudio = document.getElementById("backgroundMusic");
+    let audioWin = document.getElementById("gameWon");
+    let audioLost = document.getElementById("gameLost");
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
 // }
@@ -176,30 +179,32 @@ function main() {
          }
      }
 
-    function grid() {
-        ctx.save();
-        ctx.strokeStyle = 'grey';
-        ctx.lineWidth = 0.25;
-        for (let row = 0; row < 60; row++) {
-            if (row % 5 == 0) ctx.lineWidth = 0.5;
-            if (row % 10 == 0) ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(0, row * 10);
-            ctx.lineTo(800, row * 10);
-            ctx.stroke();
-            if (row % 5 == 0) ctx.lineWidth = 0.25;
-        }
-        for (let col = 0; col < 80; col++) {
-            if (col % 5 == 0) ctx.lineWidth = 0.5;
-            if (col % 10 == 0) ctx.lineWidth = 1;
-            ctx.beginPath();
-            ctx.moveTo(col * 10, 0);
-            ctx.lineTo(col * 10, 600);
-            ctx.stroke();
-            if (col % 5 == 0) ctx.lineWidth = 0.25;
-        }
-        ctx.restore();
-    }
+ function grid() {
+
+     ctx.save();
+
+     ctx.strokeStyle = 'grey';
+     ctx.lineWidth = 0.25;
+     for (let row = 0; row < 60; row++) {
+         if (row % 5 == 0) ctx.lineWidth = 0.5;
+         if (row % 10 == 0) ctx.lineWidth = 1;
+         ctx.beginPath();
+         ctx.moveTo(0, row * 10);
+         ctx.lineTo(800, row * 10);
+         ctx.stroke();
+         if (row % 5 == 0) ctx.lineWidth = 0.25;
+     }
+     for (let col = 0; col < 80; col++) {
+         if (col % 5 == 0) ctx.lineWidth = 0.5;
+         if (col % 10 == 0) ctx.lineWidth = 1;
+         ctx.beginPath();
+         ctx.moveTo(col * 10, 0);
+         ctx.lineTo(col * 10, 600);
+         ctx.stroke();
+         if (col % 5 == 0) ctx.lineWidth = 0.25;
+     }
+     ctx.restore();
+ }
 
     function loadImages() {
         let imgArr = ['nakov', 'rakia', 'royal', 'salata', 'pornhub', 'beer', 'simeon',
@@ -265,11 +270,13 @@ function main() {
 
         let rngWinIndex = Math.floor(Math.random() * 2);
         ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
+
+        backgroundAudio.pause();
         arr = [];
-        let audioWin = document.getElementById("gameWon");
         setTimeout(playWinAudio, 500);
         function playWinAudio() {
             audioWin.play();
+            backgroundAudio.currentTime = 0;
         }
 
         restartButton(80);
@@ -310,11 +317,11 @@ function main() {
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         let gameoverImage = new Image();
 
-
-        let audioLost = document.getElementById("gameLost");
+        backgroundAudio.pause();
         setTimeout(playLostAudio, 500);
         function playLostAudio() {
             audioLost.play();
+            backgroundAudio.currentTime = 0;
         }
 
         gameoverImage.src = './images/gameOver.jpg';
@@ -336,8 +343,19 @@ function main() {
     function setGame() {
 
         loadImages();
-        setTimeout( drawCards, 200 );
-        setTimeout( timeLine, 200 );
+        setTimeout( drawCards, 183 );
+        setTimeout( timeLine, 183 );
+
+
+        setTimeout(playBackground, 500);
+        function playBackground() {
+            setTimeout(backgroundAudio.play(), 500);
+            audioLost.pause();
+            audioLost.currentTime = 0;
+            audioWin.pause();
+            audioWin.currentTime = 0;
+        }
+
     }
 
     setGame();
