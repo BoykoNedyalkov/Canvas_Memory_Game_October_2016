@@ -6,6 +6,7 @@ function main() {
     let foundCards = 0;
     let flippedCards = [];
     let arr = [];
+    let click = true;
 
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
@@ -33,6 +34,7 @@ function main() {
     }
 
     function onCanvasClick(e) {
+        if(click){
         let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
         let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
 
@@ -42,6 +44,7 @@ function main() {
         }
 
         flipCards( col, row );
+        }
     }
 
     function flipCards( col, row ) {
@@ -151,6 +154,7 @@ function main() {
              progress++;
              if(pr >= 415){
                  clearInterval(timer);
+                 click = false;
                  gameOver();
              }
              ctx.fillStyle = 'black';
