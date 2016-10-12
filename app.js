@@ -45,10 +45,7 @@ function main() {
                 }
                 else {
                     //alert('tuk');
-                    setTimeout(function () {
-                        flipBack(firstImage, secondImage);
-                    }, 1000);
-
+                    setTimeout( () => flipBack(firstImage, secondImage), 1000);
                 }
                 flippedCards = [];
             }
@@ -216,7 +213,7 @@ function main() {
 
                 let front = new Image();
                 let back = new Image();
-                let pictureName = `${imgArr[rngIndex]}`;
+                let frontImgName = `${imgArr[rngIndex]}`;
                 // Gets the image id from directory via relative path
                 front.src = `./images/90x90/${imgArr[rngIndex]}_90x90.jpg`;
                 back.src = `./images/90x90/SoftUni_90x90.jpg`;
@@ -224,7 +221,7 @@ function main() {
                 imgArr.splice(rngIndex, 1); // Shrinks the array to get correct img
 
                 arr[col][row] = {
-                        name: pictureName,
+                        name: frontImgName,
                         img:[front, back],
                         isFlipped: false,
                         startPointX : startX,
@@ -246,19 +243,17 @@ function main() {
         winImg.src = `./images/Win.png`;
         ctx.drawImage( winImg, 20,20, 450, 360 );
         // TODO: Make it if the player wants to reset the game
-        setTimeout( () => resetGame(), 4000 );
+        setTimeout( () => setGame(), 4000 );
     }
 
-    function resetGame() {
-        // TODO: Can we make it to have no repetition with window
+    function setGame() {
+        // TODO: Make it so that the first start does not have to be refreshed
         window.drawImages = drawCards();
         window.loadingBar = timeLine();
 
     }
 
-    window.drawImages = drawCards();
-    window.loadingBar = timeLine();
-
+    setGame()
 }
 
 setTimeout( main , 100 );
