@@ -5,11 +5,12 @@ function main() {
     let foundCards = 0;
     let flippedCards = [];
     let arr = [];
-    let click = true;
+    let click = false;
     let gameIsWon = false;
     let backgroundAudio = document.getElementById("backgroundMusic");
     let audioWin = document.getElementById("gameWon");
     let audioLost = document.getElementById("gameLost");
+    let flipCardAudio = document.getElementById("cardFlip");
     let hasRestartButton = false;
 
 // function cls() { // TODO: For what is this func
@@ -38,11 +39,21 @@ function main() {
     }
 
     function onCanvasClick(e) {
-        if(click){
+     if(hasRestartButton == true){
+            let x = getCursorPosition(e)[0];
+            let y = getCursorPosition(e)[1];
+            if(x >= canvas.width / 2 - 95 && x <= canvas.width / 2 + 105
+                && y >= 400 && y <= 460){
+
+                location.reload();
+            }
+        }
+         else if(click == true){
             let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
             let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
 
-            // To not throw exception in console if it is not within the array with images
+
+        // To not throw exception in console if it is not within the array with images
             if (!(row >= 0 && row < 4 && col >= 0 && col < 5)){
                 return
             }
@@ -50,13 +61,6 @@ function main() {
             flipCards( col, row );
         }
 
-        if(!click && hasRestartButton == true){
-            let x = getCursorPosition(e)[0];
-            let y = getCursorPosition(e)[1];
-            if(x >= canvas.width / 2 - 100 && x <= canvas.width / 2 + 100 && y >= 60 && y <= 100){
-                location.reload();
-            }
-        }
     }
 
     function flipCards( col, row ) {
@@ -68,6 +72,12 @@ function main() {
             flippedCards.push(obj);
             ctx.drawImage(obj.img[0], obj.startPointX, obj.startPointY);
 
+            function playFlipCardSound() {
+                flipCardAudio.pause();
+                flipCardAudio.currentTime = 0;
+                flipCardAudio.play();
+            }
+            playFlipCardSound();
             if (flippedCards.length == 2) {
                 let firstImage = flippedCards[0];
                 let secondImage = flippedCards[1];
@@ -147,12 +157,13 @@ function main() {
          let progress = 0;
 
          function line() {
-             let pr = progress * 5;
 
-             if(pr >= 360){
+             let pr = progress * 0.25;
+
+             if(pr >= 350){
                  ctx.fillStyle = 'red';
                  ctx.font = '15pt italic';
-                 ctx.fillText('You are running out of time!', 150,200);
+                 ctx.fillText('You are running out of time!', 260,430);
 
              }
              ctx.beginPath();
@@ -163,22 +174,26 @@ function main() {
              ctx.lineWidth = 20;
              ctx.stroke();
 
+
+
+             ctx.fillStyle = 'white';
+             ctx.font = '10pt italic';
+             ctx.fillText('Your time', 30,450);
+
              progress++;
+             if(pr >=415){
+                 click = false
+             }
              if(pr >= 435){
 
                  clearInterval(timer);
                  click = false;
                  gameOver();
              }
-             /*if (gameIsWon == true)
-             {
-                 clearInterval(timer);
+             if(gameIsWon == true){
                  click = false;
                  gameWon();
-             }*/
-             ctx.fillStyle = 'white';
-             ctx.font = '10pt italic';
-             ctx.fillText('Your time', 30,450);
+             }
          }
      }
 
@@ -279,13 +294,9 @@ function main() {
         hasRestartButton = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         gameIsWon = true;
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-        let rngWinIndex = 0;
-        rngWinIndex += 1 % 2;
-        console.log(rngWinIndex);
-        ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
-
+        let rngWinIndex = Math.floor(Math.random() * 2);
+        ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 380 );
         backgroundAudio.pause();
         arr = []; // TODO: Maybe it needs to be removed?
         setTimeout( playWinAudio, 500 );
@@ -302,29 +313,28 @@ function main() {
         ctx.lineCap = 'round';
         ctx.lineWidth = 50;
         ctx.beginPath();
-        ctx.moveTo(canvas.width / 2 - x,80);
-        ctx.lineTo(canvas.width / 2 + x,80);
+        ctx.moveTo(canvas.width / 2 - x,430);
+        ctx.lineTo(canvas.width / 2 + x,430);
         ctx.stroke();
         ctx.strokeStyle = 'red';
         ctx.lineCap = 'round';
 
         ctx.lineWidth = 40;
         ctx.beginPath();
-        ctx.moveTo(canvas.width / 2 - 80,80);
-        ctx.lineTo(canvas.width / 2 + 80,80);
+        ctx.moveTo(canvas.width / 2 - 80,430);
+        ctx.lineTo(canvas.width / 2 + 80,430);
         ctx.stroke();
         ctx.fillStyle = 'white';
         ctx.font = "23px italic";
         ctx.textAlign = 'center';
         ctx.textBaseline = 'middle';
-        ctx.fillText("Restart Game", canvas.width / 2,80);
+        ctx.fillText("Restart Game", canvas.width / 2,430);
         gameIsWon = false;
     }
 
     function restart() {
-
-        // window.addEventListener("click", onCanvasClick);
-        // click = true;
+        window.addEventListener("click", onCanvasClick);
+        click = true;
     }
 
     function gameOver() {
@@ -343,32 +353,33 @@ function main() {
         let gameOverImage = arr.pop();
         ctx.drawImage(gameOverImage, 0,0);
 
-        let pos = -100;
-
-        setInterval( animateWords, 10 );
+        let pos = +600;
+        setInterval(animateWords, 10);
         function animateWords() {
-            pos += 0.3;
+            pos -= 1;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
             ctx.drawImage(gameOverImage, 0,0);
             restartButton(80);
             ctx.font = '40pt sans';
             ctx.fillStyle = 'white';
-            ctx.fillText("Счупи се телевизора", pos, 200);
+            ctx.fillText("Чупихме телевизора", pos, 200);
         }
     }
 
     function setGame() {
 
         loadImages();
-        setTimeout( drawCards, 183 );
-        setTimeout( timeLine, 183 );
+        gameIsWon = false;
+        setTimeout( drawCards, 300 );
+        setTimeout( timeLine, 300 );
         hasRestartButton = false;
         click = true;
         setTimeout( playBackground, 500 );
 
         function playBackground() {
             // TODO: It should be outside
-            setTimeout(backgroundAudio.play(), 500);
+            backgroundAudio.volume = 0.5;
+            backgroundAudio.play();
             audioLost.pause();
             audioLost.currentTime = 0;
             audioWin.pause();
