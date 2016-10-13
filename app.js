@@ -11,6 +11,7 @@ function main() {
     let audioWin = document.getElementById("gameWon");
     let audioLost = document.getElementById("gameLost");
     let hasRestartButton = false;
+
 // function cls() { // TODO: For what is this func
 //     ctx.clearRect(0, 0, 800, 600);
 // }
@@ -38,23 +39,21 @@ function main() {
 
     function onCanvasClick(e) {
         if(click){
-        let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
-        let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
+            let row = Math.floor((getCursorPosition(e)[1] - 20) / imageSize);
+            let col = Math.floor((getCursorPosition(e)[0] - 20) / imageSize);
 
-        // To not throw exception in console if it is not within the array with images
-        if (!(row >= 0 && row < 4 && col >= 0 && col < 5)){
-            return
-        }
+            // To not throw exception in console if it is not within the array with images
+            if (!(row >= 0 && row < 4 && col >= 0 && col < 5)){
+                return
+            }
 
-        flipCards( col, row );
+            flipCards( col, row );
         }
 
         if(!click && hasRestartButton == true){
             let x = getCursorPosition(e)[0];
             let y = getCursorPosition(e)[1];
-            if(x >= canvas.width / 2 - 100 && x <= canvas.width / 2 + 100
-                && y >= 60 && y <= 100){
-
+            if(x >= canvas.width / 2 - 100 && x <= canvas.width / 2 + 100 && y >= 60 && y <= 100){
                 location.reload();
             }
         }
@@ -256,7 +255,7 @@ function main() {
             arr[5].push(winImg)
         }
 
-        // Load ending image
+        // Load losing image
         let gameOverImage = new Image();
         gameOverImage.src = './images/gameOver.jpg';
         arr.push(gameOverImage)
@@ -275,19 +274,21 @@ function main() {
     }
 
     function gameWon() {
-        //timeLine()
+
         click = false;
         hasRestartButton = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
         gameIsWon = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
-        let rngWinIndex = Math.floor(Math.random() * 2);
+
+        let rngWinIndex = 0;
+        rngWinIndex += 1 % 2;
+        console.log(rngWinIndex);
         ctx.drawImage( arr[5][rngWinIndex], 10, 10, 500, 400 );
 
         backgroundAudio.pause();
         arr = []; // TODO: Maybe it needs to be removed?
-        setTimeout(playWinAudio, 500);
+        setTimeout( playWinAudio, 500 );
         function playWinAudio() {
             audioWin.play();
             backgroundAudio.currentTime = 0;
@@ -332,7 +333,8 @@ function main() {
         hasRestartButton= true;
         click = false;
         backgroundAudio.pause();
-        setTimeout(playLostAudio, 500);
+        setTimeout( playLostAudio, 500 );
+
         function playLostAudio() {
             audioLost.play();
             backgroundAudio.currentTime = 0;
@@ -342,7 +344,8 @@ function main() {
         ctx.drawImage(gameOverImage, 0,0);
 
         let pos = -100;
-        let timer = setInterval(animateWords, 10);
+
+        setInterval( animateWords, 10 );
         function animateWords() {
             pos += 0.3;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
@@ -361,7 +364,7 @@ function main() {
         setTimeout( timeLine, 183 );
         hasRestartButton = false;
         click = true;
-        setTimeout(playBackground, 500);
+        setTimeout( playBackground, 500 );
 
         function playBackground() {
             // TODO: It should be outside
