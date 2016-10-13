@@ -8,6 +8,7 @@ function main() {
     let click = false;
     let gameIsWon = false;
     let hasRestartButton = false;
+    let timeBarProgress = true;
 
     window.addEventListener( "click", onCanvasClick );
 
@@ -194,13 +195,15 @@ function main() {
         ctx.lineWidth = 25;
         ctx.stroke();
 
-        let timer = setInterval( line, 20);
+
+        let timer = setInterval(line, 60);
+
         let progress = 0;
 
         function line() {
-
-            let pr = progress * 0.20; // Time bar's speed
-
+            let x = 0;
+            timeBarProgress?x=0.2:x=0.00;
+            let pr = progress * x; // Time bar's speed
             if(pr >= 350){
                 ctx.fillStyle = 'red';
                 ctx.font = '15pt italic';
@@ -208,7 +211,8 @@ function main() {
 
             }
             ctx.beginPath();
-            ctx.strokeStyle = 'red';
+            timeBarProgress?ctx.strokeStyle = 'red':ctx.strokeStyle = 'white';//Changed
+
             ctx.lineCap="round";
             ctx.moveTo(30 + pr,450);
             ctx.lineTo(30 + pr + 15,450);
@@ -263,7 +267,7 @@ function main() {
     }
 
     function gameWon(timer) {
-
+        timeBarProgress = false;
         click = false;
         hasRestartButton = true;
         ctx.clearRect(0, 0, canvas.width, canvas.height);
